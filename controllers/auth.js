@@ -30,7 +30,7 @@ router.post("/login", async (req, res) =>{
 		} else {
 
 			// req.session.message = "Incorrect username or password";
-			res.redirect("auth")
+			res.redirect("/auth")
 
 	};
 	} catch(err){
@@ -49,16 +49,16 @@ router.post("/register", (req, res) =>{
 		userDbEntry.username = req.body.username;
 		userDbEntry.email = req.body.email;
 		userDbEntry.password = passwordHash;
-
+		console.log("DADFADSF")
 		User.create(userDbEntry, (err, createdUser) => {
-
+			console.log(createdUser)
 			if(err){
 				console.log(err)
 				res.send(err)
 			} else {
-				req.session.username = createdUser.username;
-				req.session.loggedIn = true;	
-				res.redirect("/index.ejs")
+				// req.session.username = createdUser.username;
+				// req.session.loggedIn = true;	
+				res.send("success")
 			}
 		});	
 
