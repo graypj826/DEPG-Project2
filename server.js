@@ -10,7 +10,7 @@ app.use(express.static('./public'));
 
 const usersController = require('./controllers/auth.js');
 
-app.use('/users', usersController);
+app.use('/auth', usersController);
 
 
 app.get('/', (req,res) => {
