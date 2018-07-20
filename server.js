@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
-//require('./db/project2');
+require('./db/db.js');
 
 app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({extended: false}));
