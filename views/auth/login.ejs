@@ -4,7 +4,23 @@
 	<title></title>
 </head>
 <body>
-	<h1> Hello and welcome to "PROJECT 2"!
+	<section class="greeting">
+		<h1> Hello and welcome to "PROJECT 2"!</h1>
+		<p> log in to your account or register! </h1>
+	<section>
+		<form action="/login" method="POST">
+			<p> Login: </p>
+			<p> <input type="text" name="username" placeholder="username"/></p>
+			<p> <input type="text" name="username" placeholder="password"/></p>
+			<p> <input type="submit" value="POST">Login </input></p>
+		</form>
+
+		<form action="/register" method="POST">
+			<p> Register: </p>
+			<p> <input type="text" name="username" placeholder="username"/></p>
+			<p> <input type="text" name="username" placeholder="password"/></p>
+			<p> <input type="submit" value="POST">Register </input></p>
+		</form>
 
 </body>
 </html>
