@@ -14,5 +14,9 @@ mongoose.connection.on('error', (err) => {
 
 mongoose.connection.on('disconnected', () => {
   console.log('mongoose is disconnected');
+<<<<<<< HEAD
 });
 
+=======
+});
+>>>>>>> 6c946e7981ab5b52943e60d2d07b8b5a4a1860f5
