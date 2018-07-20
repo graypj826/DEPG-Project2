@@ -3,17 +3,10 @@ const router = express.Router;
 
 const User = ("../models/users")
 
-router.get("/", async (req, res) =>{
-	try{
-		
+router.get("/", no(req, res) =>{
 		res.render("auth/login.ejs",{
 			message: req.session.message
 		});
-
-	} catch(err) {
-		
-		res.render(err);
-	};
 });
 
 router.post("/login", async (req, res) =>{
