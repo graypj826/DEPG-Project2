@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-const mongoose
-=======
+
 const mongoose = require('mongoose');
 
 // create our db and connect
@@ -17,4 +15,4 @@ mongoose.connection.on('error', (err) => {
 mongoose.connection.on('disconnected', () => {
   console.log('mongoose is disconnected');
 });
->>>>>>> f88d48276e5be27ed52a4319ebb8a62bb462d939
+
