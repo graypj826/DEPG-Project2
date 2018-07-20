@@ -1,9 +1,9 @@
 const express = require ("express");
 const router = express.Router;
 
-const User = ("../models/users")
+// const User = ("../models/users")
 
-router.get("/", no(req, res) =>{
+router.get("/", (req, res) =>{
 		res.render("auth/login.ejs",{
 			message: req.session.message
 		});
@@ -70,5 +70,5 @@ router.get("/logout", async (req, res) => {
 
 
 
-
+module.exports = router;
 

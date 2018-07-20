@@ -8,9 +8,9 @@ app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static('./public'));
 
-//const usersConroller = require('./controllers/users.js');
+const usersController = require('./controllers/auth.js');
 
-//app.use('/users', usersController);
+app.use('/users', usersController);
 
 
 app.get('/', (req,res) => {
