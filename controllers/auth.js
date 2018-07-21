@@ -12,31 +12,63 @@ router.get("/", (req, res) =>{
 		});
 });
 
-router.post("/login", async (req, res) =>{
-	try{
-	const user = await User.findOne({username: req.body.username})
-		if (user){
-			if(bcrypt.compareSync(req.body.password, user.password)){
-				req.session.username = user.username;
-				req.session.loggedIn = true;
+router.post("/login", (req, res) =>{
+		User.findOne({username: req.body.username}, (err, user) => {
+			
+			if(err){ //if check 1
+				
+				res.send(err)
 
-				res.redirect ("/index.ejs")
-			} else {
+			} else { //if check 1
 
-				// req.session.message = "Incorrect username or password";
-				res.redirect("/auth")
+				console.log(user)
 
-			}
-		} else {
+				if (user){ //function 1
+					
+					if(err){ //if check 2
+					
+						res.send(err)
+					
+					} else { //if check 2
 
-			// req.session.message = "Incorrect username or password";
-			res.redirect("/auth")
+						if(bcrypt.compareSync(req.body.password, user.password)){ //function 2
+							
+							if (err) { //if check 3
 
-	};
-	} catch(err){
-		res.send(err);
-	}
+								res.send(err)
+							
+							} else{ //if check 3
+							
+								// req.session.username = user.username;
+							
+								// req.session.loggedIn = true;
 
+								res.send("loggedin!")
+							}
+							
+						} else { //function 2
+
+							if(err) { //if check 4
+
+								res.send(err)
+
+							} else { //if check 4
+							
+								// req.session.message = "Incorrect username or password";
+								res.send("incorrect username password")
+
+							};
+						}
+					}
+
+				} else { //function 1
+
+					// req.session.message = "Incorrect username or password";
+					res.send("not a user")
+				};
+
+			};
+		});		
 });
 
 router.post("/register", (req, res) =>{
@@ -49,9 +81,9 @@ router.post("/register", (req, res) =>{
 		userDbEntry.username = req.body.username;
 		userDbEntry.email = req.body.email;
 		userDbEntry.password = passwordHash;
-		console.log("DADFADSF")
+
 		User.create(userDbEntry, (err, createdUser) => {
-			console.log(createdUser)
+	
 			if(err){
 				console.log(err)
 				res.send(err)
