@@ -35,6 +35,21 @@ router.get("/new", async (req, res) => {
 	} 
 });
 
+router.get("/:id", async (req, res) => {
+	try{
+
+		// const foundMovie = Movie.findById(req.params.id);
+
+		res.render("movies/show.ejs") 
+		// movies/show.esj", {
+		// 	movie: foundMovie
+		// })
+
+	} catch (err){
+
+	}
+})
+
 router.post("/", async (req, res) => {
 	try{
 
