@@ -13,7 +13,7 @@
 		</nav>
 	</header>
 	<main>
-		<form method="POST" action="/movies/<%=movie.id%>?_method="PUT">
+		<form method="POST" action="/movies/<%=movie.id%>?_method=PUT">
 			Title: <input type="text" name="title" placeholder="title"> 
 			Genre: <input type="text" name="genre" placeholder="genre"> 
 			Poster : <input type="text" name="poster" placeholder="poster"> 
@@ -22,7 +22,10 @@
 			Rating : <input type="text" name="rating" placeholder="rating"> 
 			<button type="submit"> Submit </button>
 		</form>
-	
+		<form method="POST" action="/movies/<%=movie.id%>?_method=DELETE">
+			<button type="submit" value="Delete Movie" name="delete"> Delete </button>
+
+
 	</main>
 
 </body>

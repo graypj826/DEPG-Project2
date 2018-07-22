@@ -75,9 +75,6 @@ router.get("/:id", (req, res) => {
 	});
 });
 
-
-
-
 router.post("/", async (req, res) => {
 	try{
 
@@ -90,6 +87,33 @@ router.post("/", async (req, res) => {
 		res.send(err)
 	
 	}
+});
+
+
+router.put("/:id", (req, res) =>{
+
+	Movies.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedMovie) =>{
+		if (err){
+			console.log(error, "error")
+			res.send(error)
+		} else {
+			res.redirect("/movies")
+		}	
+	})	
+
 })
+
+router.delete("/:id", (req, res) => {
+	Movies.findByIdAndRemove(req.params.id, (err, removedMovie) => {
+		if (err){
+			console.log(err)
+			res.send(err)
+		} else {
+			res.redirect("/movies")
+		}
+	})
+})
+
+
 
 module.exports = router
