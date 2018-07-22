@@ -23,16 +23,97 @@ router.get("/new", async (req, res) => {
 	try{
 
 		// const allUsers = await Users.find({});
-		res.render("movies/new.ejs");
+		res.render("movies/new.ejs"
+		// 	, {
+		// 	users : allUsers,
+		// }
+		);
 
 	} catch(err) {
 
 		res.send(err)
+	} 
+});
+
+router.get("/:id/edit", (req, res) => {
+
+	Movies.findById(req.params.id, (err, foundMovie) => {
+
+		if(err){
+			console.log(err)
+			res.send(err)
+
+		} else {
+
+			res.render("movies/edit.ejs", {
+
+				movie: foundMovie
+
+			})
+
+		}
+
+	})
+})
+
+
+router.get("/:id", (req, res) => {
+	
+	Movies.findById(req.params.id, (err, foundMovie) =>{
+		if (err){
+
+			res.send(err)
+		
+		} else {
+
+			res.render("movies/show.ejs", {
+			
+				movie: foundMovie
+
+			});
+		}
+	});
+});
+
+router.post("/", async (req, res) => {
+	try{
+
+		const createMovie = await Movies.create(req.body);
+
+		res.redirect("/movies")
+
+	} catch (err){
+		
+		res.send(err)
+	
 	}
 });
 
-// router.get("/:id", async (req, res) => {
 
-// })
+router.put("/:id", (req, res) =>{
+
+	Movies.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedMovie) =>{
+		if (err){
+			console.log(error, "error")
+			res.send(error)
+		} else {
+			res.redirect("/movies")
+		}	
+	})	
+
+})
+
+router.delete("/:id", (req, res) => {
+	Movies.findByIdAndRemove(req.params.id, (err, removedMovie) => {
+		if (err){
+			console.log(err)
+			res.send(err)
+		} else {
+			res.redirect("/movies")
+		}
+	})
+})
+
+
 
 module.exports = router

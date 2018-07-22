@@ -4,16 +4,29 @@
 	<title></title>
 </head>
 <body>
+	<header>
+		<h1> PROJECT 2 </h1>
+		<nav>
+			<a href="/movies"> Index </a>
+			<a href="/index"> Home </a>
+			<a href="/users"> Users </a>
+		</nav>
+	</header>
+
 	<h1> Have a movie you'd recommend to other users? Add it to your databse! </h1>
 
-	<form method="POST" action="/auth">
+	<form method="POST" action="/movies">
 		Title: <input type="text" name="title" placeholder="title"> 
-		Genre: <input type="text" name="title" placeholder="title"> 
-		Poster : <input type="text" name="title" placeholder="title"> 
-		Cast : <input type="text" name="title" placeholder="title"> 
-		Director : <input type="text" name="title" placeholder="title"> 
-		Rating : <input type="text" name="title" placeholder="title"> 
+		Genre: <input type="text" name="genre" placeholder="genre"> 
+		Poster : <input type="text" name="poster" placeholder="poster"> 
+		Stars : <input type="text" name="stars" placeholder="stars"> 
+		Director : <input type="text" name="director" placeholder="director"> 
+		Rating : <input type="text" name="rating" placeholder="rating"> 
+		<button type="submit"> Submit </button>
 	</form>
+	<a href="/movies"> Index </a>
+	<a href="/index"> Home </a>
+	<a href="/users"> Users </a>
 
 
 </body>
