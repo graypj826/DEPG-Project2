@@ -35,38 +35,61 @@ router.get("/new", async (req, res) => {
 	} 
 });
 
-router.get("/:id", async (req, res) => {
-	try{
+router.get("/:id/edit", (req, res) => {
 
-		// const foundMovie = Movie.findById(req.params.id);
+	Movies.findById(req.params.id, (err, foundMovie) => {
 
-		res.render("movies/show.ejs") 
-		// movies/show.esj", {
-		// 	movie: foundMovie
-		// })
+		if(err){
+			console.log(err)
+			res.send(err)
 
-	} catch (err){
+		} else {
 
-	}
+			res.render("movies/edit.ejs", {
+
+				movie: foundMovie
+
+			})
+
+		}
+
+	})
 })
+
+
+router.get("/:id", (req, res) => {
+	
+	Movies.findById(req.params.id, (err, foundMovie) =>{
+		if (err){
+
+			res.send(err)
+		
+		} else {
+
+			res.render("movies/show.ejs", {
+			
+				movie: foundMovie
+
+			});
+		}
+	});
+});
+
+
+
 
 router.post("/", async (req, res) => {
 	try{
 
 		const createMovie = await Movies.create(req.body);
 
-		console.log(createMovie)
-
 		res.redirect("/movies")
 
 	} catch (err){
-		console.log(err)
+		
 		res.send(err)
+	
 	}
 })
-
-// router.get("/:id", async (req, res) => {
-
-// })
 
 module.exports = router

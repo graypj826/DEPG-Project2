@@ -4,8 +4,35 @@
 	<title></title>
 </head>
 <body>
-	<h1> welcome to the show the movies show page </h1>
+	<header>
+		<h1> PROJECT 2 </h1>
+		<nav>
+			<a href="/movies"> Index </a>
+			<a href="/index"> Home </a>
+			<a href="/users"> Users </a>
+		</nav>
+	</header>
+	<main>
+	<h1> <%= movie.title %> </h1>
+
+	<img src="<%=movie.poster%>">
+
+	<section>
+
+		Title: <%= movie.title%>  
+		
+		Genre: <%= movie.title%> 
+
+		Stars: <%= movie.title%> 
+
+		Director: <%= movie.title%> 
+		
+		Rating: <%= movie.title%> 
+	</section>
+
+	<a href="/movies/<%=movie.id%>/edit"> Edit This Movie </a>	
 	
+
 
 </body>
 </html>

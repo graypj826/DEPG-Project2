@@ -21,8 +21,6 @@ router.post("/login", (req, res) =>{
 
 			} else { //if check 1
 
-				console.log(user)
-
 				if (user){ //function 1
 					
 					if(err){ //if check 2
