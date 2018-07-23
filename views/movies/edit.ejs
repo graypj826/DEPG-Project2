@@ -14,12 +14,12 @@
 	</header>
 	<main>
 		<form method="POST" action="/movies/<%=movie.id%>?_method=PUT">
-			Title: <input type="text" name="title" placeholder="title"> 
-			Genre: <input type="text" name="genre" placeholder="genre"> 
-			Poster : <input type="text" name="poster" placeholder="poster"> 
-			Stars : <input type="text" name="stars" placeholder="stars"> 
-			Director : <input type="text" name="director" placeholder="director"> 
-			Rating : <input type="text" name="rating" placeholder="rating"> 
+			Title: <input type="text" name="title" placeholder="<%=movie.title%>"> 
+			Genre: <input type="text" name="genre" placeholder="<%=movie.genre%>"> 
+			Poster : <input type="text" name="poster" placeholder="<%=movie.poster%>"> 
+			Stars : <input type="text" name="stars" placeholder="<%=movie.stars%>"> 
+			Director : <input type="text" name="director" placeholder="<%=movie.director%>"> 
+			Rating : <input type="text" name="rating" placeholder="<%=movie.rating%>"> 
 			<button type="submit"> Submit </button>
 		</form>
 		<form method="POST" action="/movies/<%=movie.id%>?_method=DELETE">

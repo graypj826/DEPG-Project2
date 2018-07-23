@@ -23,6 +23,7 @@ router.get("/logout", async (req, res) => {
 		if(err){
 			res.send("error destroying session");	
 		} else {
+			//req.session.loggedIn = false;
 			res.redirect("/auth")
 		}
 	})
@@ -54,11 +55,12 @@ router.post("/login", (req, res) =>{
 							
 							} else{ //if check 3
 							
-								// req.session.username = user.username;
+								 //req.session.username = user.username;
 							
-								// req.session.loggedIn = true;
+								 //req.session.loggedIn = true;
 
-								res.send("loggedin!")
+								//res.send("loggedin!")
+								res.redirect("/movies")
 							}
 							
 						} else { //function 2

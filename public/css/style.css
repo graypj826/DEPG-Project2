@@ -1,5 +1,5 @@
 * {
-	background-color: linear-gradient(to right, grey, black);
+	background-color: linear-gradient(right, grey, black);
 	
 	/*background-color: blue;*/
 	
@@ -31,7 +31,11 @@
 }
 
 .begincontainer {
+	background-color: rgba(255,255,255,.5);
 background-image: inherit;
+width: 100px;
+height: 50px;
+transition: font-size .5s;
 
 font-family: 'Oswald', sans-serif;
 color: grey;
@@ -40,20 +44,31 @@ font-size: 24px;
 	grid-row: 2;
 	box-shadow: 6px 6px 2px 1px rgba(0,0,0,.2);
 }
+.begincontainer:hover {
+
+font-size: 40px;
+}
 
 .login-container {
-background-image: inherit;
-
+text-align: right;
+transition: background-color 2s;
+transition: color 2s;
 font-family: 'Oswald', sans-serif;
-color: black;
+color: white;
 font-size: 18px;
 	grid-column: 4 / 10;
 	grid-row: 2;
 	box-shadow: 6px 6px 2px 1px rgba(0,0,0,.2);
 }
+.login-container:hover {
+	background-color: lightgrey;
+	color: black;
+}
 
 .register-container {
 
+transition: background-color 2s;
+transition: color 2s;
 font-family: 'Oswald', sans-serif;
 color: black;
 font-size: 18px;
@@ -62,6 +77,10 @@ font-size: 18px;
 	box-shadow: 6px 6px 2px 1px rgba(0,0,0,.2);
 }
 
+.register-container:hover {
+	background-color: darkgrey;
+	color: white;
+}
 
 .footer {
 	background-image: initial;
