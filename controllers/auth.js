@@ -12,6 +12,23 @@ router.get("/", (req, res) =>{
 		});
 });
 
+router.get("/register", (req,res) => {
+	res.render("auth/register.ejs",{
+		// message: req.session.message
+	});
+});
+
+router.get("/logout", async (req, res) => {
+	req.session.destroy((err) => {
+		if(err){
+			res.send("error destroying session");	
+		} else {
+			res.redirect("/auth")
+		}
+	})
+})
+
+
 router.post("/login", (req, res) =>{
 		User.findOne({username: req.body.username}, (err, user) => {
 			
@@ -94,15 +111,6 @@ router.post("/register", (req, res) =>{
 
 });
 
-router.get("/logout", async (req, res) => {
-	req.session.destroy((err) => {
-		if(err){
-			res.send("error destroying session");	
-		} else {
-			res.redirect("/auth")
-		}
-	})
-})
 
 
 

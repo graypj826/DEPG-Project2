@@ -1,7 +1,75 @@
 * {
-	background-color: blue;
-	font-family: 'Nunito', sans-serif;
-	color: yellow;
+	background-color: linear-gradient(to right, grey, black);
+	
+	/*background-color: blue;*/
+	
 	
 }
 
+.wrapper {
+	background-image: url("https://imgur.com/7oheQKK.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+  display: grid;
+  border: 1px solid green;
+  grid-template-columns: repeat(16, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(20px, auto);
+
+}
+
+.reg-wrapper {
+	background-image: url("https://imgur.com/7oheQKK.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+  display: grid;
+  border: 1px solid green;
+  grid-template-columns: repeat(16, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(20px, auto);
+
+}
+
+.begincontainer {
+background-image: inherit;
+
+font-family: 'Oswald', sans-serif;
+color: grey;
+font-size: 24px;
+	grid-column: 2;
+	grid-row: 2;
+	box-shadow: 6px 6px 2px 1px rgba(0,0,0,.2);
+}
+
+.login-container {
+background-image: inherit;
+
+font-family: 'Oswald', sans-serif;
+color: black;
+font-size: 18px;
+	grid-column: 4 / 10;
+	grid-row: 2;
+	box-shadow: 6px 6px 2px 1px rgba(0,0,0,.2);
+}
+
+.register-container {
+
+font-family: 'Oswald', sans-serif;
+color: black;
+font-size: 18px;
+	grid-column: 10 / 16;
+	grid-row: 2;
+	box-shadow: 6px 6px 2px 1px rgba(0,0,0,.2);
+}
+
+
+.footer {
+	background-image: initial;
+	font-family: 'Merienda', cursive;
+	font-size: 5px;
+	grid-column: 20;
+	grid-row: 25;
+	vertical-align: bottom;
+	color: white;
+
+}

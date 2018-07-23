@@ -12,7 +12,7 @@ const authController = require('./controllers/auth.js');
 const moviesController = require("./controllers/movies.js");
 const usersController = require("./controllers/users.js");
 
-app.use('/auth', authController);
+app.use("/auth", authController);
 app.use("/movies", moviesController);
 app.use("/users",  usersController);
 

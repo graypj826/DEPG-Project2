@@ -5,23 +5,33 @@
     <title>DEPG-WDI Project 2</title>
   <link href="https://fonts.googleapis.com/css?family=Merienda|Oswald" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css" type="text/css">
-  <style type="text/css">
-   
-  </style>
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
   </head>
   <body>
-    <!--<h1>Welcome!</h1>
-    <h2>Having trouble picking a movie to watch?</h2>-->
-    <div class="wrapper">
-      <!--<div class="begincontainer">-->
-      <form class="begincontainer">
-        <a href="/auth" style="text-decortation: none">Begin</a>
-      </form>
-      <div class="footer">
+
+<div class="wrapper">
+
+	<div class="register-container">
+		
+
+		<form action="/auth/register" method="POST">
+			<p> Please register for added features! </p>
+			<input type="text" name="username" placeholder="username">
+			<input type="email" name="email" placeholder="email">
+			<input type="password" name="password" placeholder="password">
+			<button type="submit"> Register </button>
+		</form>
+	</div>
+
+	<div class="footer">
         <p style="align: right">.</p>
       </div>
-    </div>
+
+</div>
+
+
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
