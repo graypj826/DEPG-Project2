@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1> View Which?_Flix's Other Critics </h1>
+	<p>
+	<% for(let i = 0; i < users.length; i++){ %>
+		<a href="/users/<%=users[i].id%>"><%=users[i].username%></a></p>
+
+	<%}%>
+</body>
+</html>
