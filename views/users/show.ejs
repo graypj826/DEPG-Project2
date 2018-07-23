@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p> <%=user.username%> </p>
+
+
+	<img src="<%=user.profilePic%>"><br>
+	
+
+	username: <%=user.username%><br>
+	email: <%=user.email%><br>
+  	Favorite Genre: <%=user.favoriteGenre%><br>
+	Favorite Director:  <%=user.favoriteDirector%><br>
+	favoriteMovie: <%=user.favoriteMovie%><br>
+	favoriteActor: <%=user.favoriteActor%><br>
+  	Movies Added To The Database: PlaceHolder <br>
+  	Movie Recommendations History: PlaceHolder <br>
+	
+	<a href="/users/<%=user.id%>/edit"> Edit <%=user.username%> <%=user.name%></a>
+	
+</body>
+</html>
+

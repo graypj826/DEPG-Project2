@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p> Edit <%=user.username%> </p>
+
+	<img src="<%=user.profilePic%>">
+
+	<form method="POST" action="/users/<%=user.id%>?_method=PUT">
+		username: <input type="text" name="username" placeholder = "<%=user.username%>">
+		email: <input type="text" name="email" placeholder = "<%=user.email%>">
+	  	profile picture: <input type="text" name="profilePic" placeholder = "<%=user.profilePic%>">
+	  	Favorite Genre: <input type="text" name="favoriteGenre" placeholder = "<%=user.favoriteGenre%>">
+		Favorite Director:  <input type="text" name="favoriteDirector" placeholder = "<%=user.favoriteDirector%>">
+		Favorite Movie: <input type="text" name="favoriteMovie" placeholder = "<%=user.favoriteMovie%>">
+		Favorite Actor: <input type="text" name="favoriteActor" placeholder = "<%=user.favoriteActor%>">
+	  	<button type="submit"> Save <%=user.username%></button>
+	</form> 
+	<form method="POST" action="/users/<%=user.id%>?_method=DELETE">
+			<button type="submit" value="Delete Account" name="delete"> Delete Your Account</button>
+	
+</body>
+</html>
+</body>
+</html>
