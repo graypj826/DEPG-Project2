@@ -11,11 +11,12 @@ app.use(express.static('./public'));
 const authController = require('./controllers/auth.js');
 const moviesController = require("./controllers/movies.js");
 const usersController = require("./controllers/users.js");
+const movieSelectorController = require("./controllers/movieSelector.js")
 
 app.use("/auth", authController);
 app.use("/movies", moviesController);
 app.use("/users",  usersController);
-
+app.use("/selector", movieSelectorController);
 
 app.get('/', (req,res) => {
 	res.render('index.ejs');
