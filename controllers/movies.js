@@ -1,7 +1,23 @@
+const mongoose = require("mongoose");
+
 const express = require("express");
 const router = express.Router();
 
 const Movies = require("../models/movies");
+
+///////////////////INSERT USING MONGOOSE///////////////
+////////////////### Add the movies data /////////////
+
+// const MoviesCollection = require("../populateMovies")
+
+// Movies.collection.insertMany(MoviesCollection, (err, data) => {
+//     console.log("added provided movie data")
+//     mongoose.connection.close();
+// });
+
+////////////////COMMENT OUT AFTER USE!!!!/////////////
+
+
 
 router.get("/", async (req, res) =>{
 	try{
