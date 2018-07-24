@@ -1,37 +1,39 @@
-const MoviesCollection =[{
+const MoviesCollection =[
+	{
 //Action & Adventure///////////////////////////////////
-		title : "How It Ends"
-		genre : ["Action & Adventure", "Thriller", "Sci-Fi"],
-		poster : "http://screenspotlight.com/wp-content/uploads/2018/07/how-it-ends-netflix-movie.jpg",
-		stars : [Theo James, Forest Whitaker, Kat Graham],
-		director : ["David M. Rosenthal"],
+		title: "How It Ends",
+		genre: ["Action & Adventure", "Thriller", "Sci-Fi"],
+		poster: "http://screenspotlight.com/wp-content/uploads/2018/07/how-it-ends-netflix-movie.jpg",
+		stars: ["Theo James", "Forest Whitaker", "Kat Graham"],
+		director: ["David M. Rosenthal"],
 		rating: 2,
 		year: 2018
+	},
 	{
-		title : "Star Wars: Episode VIII: The Last Jedi",
-		genre : ["Action & Adventure", "Children & Family Movies", "Sci-Fi"],
-		poster : "https://resizing.flixster.com/XAiWmOWos-ffbzDD-iGhDwHhLhI=/206x305/v1.bTsxMjU0NjIzNDtqOzE3Nzg1OzEyMDA7MTY4ODsyNTAw",
-		stars : ["Mark Hamill, Carrie Fisher, Adam Driver, Daisy Ridley"],
-		director : ["Rian Johnson"],
+		title: "Star Wars: Episode VIII: The Last Jedi",
+		genre: ["Action & Adventure", "Children & Family Movies", "Sci-Fi"],
+		poster: "https://resizing.flixster.com/XAiWmOWos-ffbzDD-iGhDwHhLhI=/206x305/v1.bTsxMjU0NjIzNDtqOzE3Nzg1OzEyMDA7MTY4ODsyNTAw",
+		stars: ["Mark Hamill, Carrie Fisher, Adam Driver, Daisy Ridley"],
+		director: ["Rian Johnson"],
 		rating: 91,
 		year: 2018
 	},
 		{
-		title : "Thor: Ragnarok",
-		genre : ["Action & Adventure", "Comedy", "Sci-Fi"],
-		poster : "https://resizing.flixster.com/aIXyMbopDniJwPTnZ0C9MF9Yh7g=/206x305/v1.bTsxMjQ2NDczNjtqOzE3Nzg0OzEyMDA7MTY4ODsyNTAw ",
-		stars : ["Chris Hemsworth", "Tom Hiddleston", "Cate Blanchett"],
-		director : ["Taika Waititi"],
+		title: "Thor: Ragnarok",
+		genre: ["Action & Adventure", "Comedy", "Sci-Fi"],
+		poster: "https://resizing.flixster.com/aIXyMbopDniJwPTnZ0C9MF9Yh7g=/206x305/v1.bTsxMjQ2NDczNjtqOzE3Nzg0OzEyMDA7MTY4ODsyNTAw",
+		stars: ["Chris Hemsworth", "Tom Hiddleston", "Cate Blanchett"],
+		director: ["Taika Waititi"],
 		rating: 92,
 		year: 2018 
 		
 	},
 	{
-		title : "Get Smart",
-		genre : ["Action & Adventure", "Comedy"]
-		poster : "https://resizing.flixster.com/5BqFfLl-XVvJ-fMCqRDLElfujbQ=/206x305/v1.bTsxMTE3NjQ2ODtqOzE3ODU5OzEyMDA7ODAwOzEyMDA",
-		stars : ["Steve Carrell", "Anne Hathaway", "Dwayne Johnson"],
-		director : ["Peter Segal"],
+		title: "Get Smart",
+		genre: ["Action & Adventure", "Comedy"],
+		poster: "https://images-na.ssl-images-amazon.com/images/I/71R90v5oeDL._SY550_.jpg",
+		stars: ["Steve Carrell", "Anne Hathaway", "Dwayne Johnson"],
+		director: ["Peter Segal"],
 		rating: 50,
 		year: 2008
 		
@@ -227,7 +229,7 @@ const MoviesCollection =[{
 	},
 	{
 		title : "GLOW: The Story Of The Gorgeous Ladies Of Wrestling", 
-		genre : ["Documentary", "Sports"]
+		genre : ["Documentary", "Sports"],
 		poster : "https://resizing.flixster.com/EfU3UfVeH_7VJRyxhoO--aPrUZE=/206x305/v1.bTsxMTE2OTE1ODtqOzE3ODU5OzEyMDA7NTEwOzc1NQ",
 		stars : null,
 		director : ["Brett Whitcomb"],
@@ -496,7 +498,7 @@ const MoviesCollection =[{
 		genre : ["Children & Family", "Musical"],
 		poster : "https://resizing.flixster.com/eP1zGHZsXmFly3HQAeKNpV-Ci00=/206x305/v1.bTsxMTIwMzk5NDtqOzE3ODU5OzEyMDA7MjI1MDszMDAw",
 		stars : ["Tate Donovan", "Danny DeVito", "James Woods"],
-		director : ["John Musker", "Ron Clements"]
+		director : ["John Musker", "Ron Clements"],
 		rating: 83,
 		year: 1997,
 		
@@ -600,7 +602,7 @@ const MoviesCollection =[{
 		genre : ["Drama", " International", "Sci-Fi & Fantasy"],
 		poster : "https://resizing.flixster.com/VeNdLeZ2iTigq6wUzEMJLS_jp4I=/206x305/v1.bTsxMTE2ODcwMTtqOzE3ODU5OzEyMDA7ODAwOzEyMDA",
 		stars : ["Tom Hanks", "Halle Berry", "Jim Broadbent"],
-		director : ["Tom Tykwer", "Lilly Wachowski", "Lana Wachowski"]
+		director : ["Tom Tykwer", "Lilly Wachowski", "Lana Wachowski"],
 		rating: 66,
 		year: 2012,
 		
@@ -661,9 +663,9 @@ const MoviesCollection =[{
 		genre : ["Thrillers", "Independent", "Crime"],
 		poster : "https://resizing.flixster.com/l7oXpnc0fg4Cm-_CtsNKr9lCrQo=/206x305/v1.bTsxMTE5MTA0MjtqOzE3ODU5OzEyMDA7Mjg0OzQwNQ",
 		stars : ["Jason Bateman", "Rebecca Hall", "Joel Edgerton"],
-		director : "Joel Edgerton",
+		director : ["Joel Edgerton"],
 		rating: 92,
-		year: 2015,
+		year: 2015
 		
 	},
 ]
