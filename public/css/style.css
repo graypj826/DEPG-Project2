@@ -1,6 +1,6 @@
 * {
 	background-color: linear-gradient(right, grey, black);
-	
+	bottom: auto;
 	/*background-color: blue;*/
 	
 	
@@ -15,6 +15,7 @@
   grid-template-columns: repeat(16, 1fr);
   grid-gap: 10px;
   grid-auto-rows: minmax(20px, auto);
+  
 
 }
 
@@ -80,6 +81,18 @@ font-size: 18px;
 .register-container:hover {
 	background-color: darkgrey;
 	color: white;
+}
+
+.movies-container {
+
+transition: background-color 2s;
+transition: color 2s;
+font-family: 'Oswald', sans-serif;
+color: black;
+font-size: 18px;
+	grid-column: 2 / 6;
+	grid-row: 5;
+	/*box-shadow: 6px 6px 2px 1px rgba(0,0,0,.2);*/
 }
 
 .footer {
