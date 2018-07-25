@@ -20,7 +20,7 @@ passport.use(new GoogleStrategy({
   function(accessToken, refreshToken, profile, done) {
   	console.log("=============This is the google profile==========")
   	console.log(profile.id);
-       User.findOrCreate({ googleId: profile.id }, function (err, user) {
+       User.findOrCreate({ googleId: profile.id, displayName: profile.displayName }, function (err, user) {
          return done(err, user);
        });
   }

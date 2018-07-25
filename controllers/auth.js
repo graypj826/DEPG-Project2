@@ -37,7 +37,6 @@ router.get("/", (req, res) =>{
 
 		// local login logic 
 router.post("/login", async(req, res, next) =>{ 
-	console.log("trying to login")
 	const passportCallback = passport.authenticate("local", {
 		successRedirect : "/auth",
 		failureRedirect : "/"})
@@ -114,7 +113,7 @@ router.get('/google',
 router.get('/google/callback', 
   passport.authenticate('google', { failureRedirect: '/login' }),
   function(req, res) {
-    res.redirect('/auth/success');
+    res.redirect('/landing');
   });
 
 // 	//========== Login ==========//
@@ -187,7 +186,7 @@ router.get('/logout', function(req, res){
 ///======= Success Path =======///
 
 router.get("/success", async (req, res) => {
-	res.send(`Good job, ${req.user.username}`)
+	res.send(`Good job, ${req.user.displayName}`)
 })
 
 

@@ -6,6 +6,7 @@ const bodyParser 			= require('body-parser');
 const methodOverride 		= require('method-override');
 const passport 				= require("passport")
 const session 				= require("express-session")
+const MongoDBStore 			= require("connect-mongodb-session")(session)
 const GoogleStrategy 		= require("passport-google-oauth").OAuthStrategy;
 const LocalStrategy			= require("passport-local").Strategy
 const passportLocalMongoose = require("passport-local-mongoose")
@@ -15,12 +16,35 @@ const cookieParser 			= require("cookie-parser")
 ////require database, .env and passport
 require('./db/db.js');
 require("dotenv").config();
+ 
+const store = new MongoDBStore({
+  uri: 'mongodb://localhost:27017/connect_mongodb_session_test',
+  collection: 'mySessions'
+});
+ 
+store.on('connected', function() {
+  store.client; // The underlying MongoClient object from the MongoDB driver
+});
+ 
+// Catch errors
+store.on('error', function(error) {
+  assert.ifError(error);
+  assert.ok(false);
+});
+ 
 
 ///////setup sessions
-app.use(session({
-	secret: "atomic cowboy donkey farts",
-	resave: false,
-	saveUnitialized: false,
+app.use(require('express-session')({
+  secret: 'This is a secret',
+  cookie: {
+    maxAge: 1000 * 60 * 60 * 24 * 7 // 1 week
+  },
+  store: store,
+  // Boilerplate options, see:
+  // * https://www.npmjs.com/package/express-session#resave
+  // * https://www.npmjs.com/package/express-session#saveuninitialized
+  resave: true,
+  saveUninitialized: true
 }));
 
 //////////////passport middleware//////////////////
@@ -60,8 +84,14 @@ require("./passport/serializing");
 
 //router to index//////////////////////////////////////
 
+
+
 app.get('/', (req,res) => {
 	res.render('index.ejs');
+});
+
+app.get('/landing', (req,res) => {
+	res.render('landingPage.ejs');
 });
 
 
