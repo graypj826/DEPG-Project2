@@ -5,6 +5,10 @@ const router = express.Router();
 
 const Movies = require("../models/movies");
 
+//set up controllers and add them as middleware/////////
+
+const isLoggedIn = require("./isLoggedIn.js")
+
 ///////////////////INSERT USING MONGOOSE///////////////
 ////////////////### Add the movies data /////////////
 
@@ -16,7 +20,6 @@ const Movies = require("../models/movies");
 // });
 
 ////////////////COMMENT OUT AFTER USE!!!!/////////////
-
 
 
 router.get("/", async (req, res) =>{
