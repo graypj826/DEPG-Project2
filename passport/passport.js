@@ -1,11 +1,11 @@
 // require files we'll need
 
-const LocalStrategy = require("passport-local").Strategy;
-const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
+const LocalStrategy 	= require("passport-local").Strategy;
+const GoogleStrategy 	= require("passport-google-oauth").OAuth2Strategy;
 
 //load User model
 
-const User = require("../models/users")
+const User 				= require("../models/users")
 
 //export the function to the app
 
@@ -17,7 +17,7 @@ module.exports = function(passport){
 		done(null, user.id)
 	});
 
-	passport.deserializeUser(function(user,done){
+	passport.deserializeUser(function(id,done){
 		User.findById(id, function(err, user){
 			done(err, user);
 		});
@@ -37,16 +37,16 @@ module.exports = function(passport){
 			User.findOne({
 				"local.email" : email
 			}, function(err, user){
-				if(err){
+				if(err)
 					return done(err);
-				}
+				
 				if(user){
 					return done(null, false, req.flash("signupMessage", "that email is already taken."));
 				} else {
 					
-					const newUser = new User();
-					newUser.local.emaol = email;
-					newUser.local.password = newUser.generateHash(password);
+					const newUser 			= 	new User();
+					newUser.local.email 	= 	email;
+					newUser.local.password 	= 	newUser.generateHash(password);
 
 					newUser.save(function(err){
 						if(err)

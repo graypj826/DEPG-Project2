@@ -13,10 +13,6 @@
 <div class="wrapper">
 
 <!--  ======== display messages if there is one ===== -->
-<% if (message.length > 0){ %>
-    <div> <%= message %> </div>
-<% } %>
-<!-- ^^^^ Display message if there is one  -->
 
 <!--  ========= Local Login ================== -->
 
@@ -28,8 +24,11 @@
 			<input type="password" name="password" placeholder="password">
 			<button type="submit"> Login </button>
 		</form>
+    
     <a href="/auth/google">Sign In with Google</a>
-		
+
+		<a href="/auth/logout">Logout</a>
+
 	</div>
 
 	<div class="footer">
@@ -37,6 +36,9 @@
       </div>
 
 </div>
+
+<!-- ====== LOGOUT ====== -->
+
 
 
 
