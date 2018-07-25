@@ -13,8 +13,14 @@
 <div class="wrapper">
 
 	<div class="register-container">
-		
 
+<!--  ======== display messages if there is one ===== -->
+<% if (message.length > 0){ %>
+    <div> <%= message %> </div>
+<% } %>
+<!-- ^^^^ Display message if there is one  -->
+		
+<!--  ======= Local Registration ================= -->
 		<form action="/auth/register" method="POST">
 			<p> Please register for added features! </p>
 			<input type="text" name="username" placeholder="username">
