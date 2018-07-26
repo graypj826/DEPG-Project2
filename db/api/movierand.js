@@ -10,8 +10,9 @@ var options = {
 
 
 
+let quid = false;
 
-
+while (quid !== true) {
 	var randId=Math.floor((Math.random() * 522000) + 8);
 	console.log(randId);
 
@@ -33,16 +34,16 @@ var options = {
 			asciify(`http://image.tmdb.org/t/p/w45///${pageObj.poster_path}`, (err, asciified) => {
     		console.log(err || asciified);
     		console.log(`${pageObj.title}	${pageObj.tagline}	${pageObj.release_date}`);
-
+    		quid = true;
 		})
 		}
 		
 		}
 		
-		
+}		
 		
    // Print the response status code if a response was received
    // Print the HTML for the Google homepage.
-	});
+
 	
 
