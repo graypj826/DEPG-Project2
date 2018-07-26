@@ -3,43 +3,39 @@
   <head>
     <meta charset="UTF-8">
     <title>DEPG-WDI Project 2</title>
-  <link href="https://fonts.googleapis.com/css?family=Merienda|Oswald" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Limelight|Poiret+One" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/style.css" type="text/css">
   
   </head>
-  <body>
+<body>
+  <div class="container-fluid">
 
-<div class="wrapper">
+  <!--  ======== display messages if there is one ===== -->
 
-<!--  ======== display messages if there is one ===== -->
-<% if (message.length > 0){ %>
-    <div> <%= message %> </div>
-<% } %>
-<!-- ^^^^ Display message if there is one  -->
+  <!--  ========= Local Login ================== -->
 
-<!--  ========= Local Login ================== -->
-
-	
-  <div class="login-container">
-		<form action="/auth/login" method="POST">
-			<p> Please log in to your account or <a href="/auth/register">register</a></p>
-			<input type="text" name="username" placeholder="username">
-			<input type="password" name="password" placeholder="password">
-			<button type="submit"> Login </button>
-		</form>
-    <a href="/auth/google">Sign In with Google</a>
-		
-	</div>
-
-	<div class="footer">
-        <p style="align: right">.</p>
+    <div class ="text-container" id="login">
+      <div class="row">
+        <div class="col-12">
+        	<form action="/auth/login" method="POST">
+        		<p> Please log in to your account or <a href="/auth/register">register</a></p>
+        		<input type="text" name="username" placeholder="username">
+        		<input type="password" name="password" placeholder="password">
+        		<button type="submit"> Login </button>
+        	</form>
+        </div>
       </div>
-
+      <div class="row">    
+        <div class="col-6" id="google-signin">
+         <p> Sign In with  <a href="/auth/google">Google</a></p>
+        </div>
+      </div>
+    </div>
+  <div class="footer">
+    <p>Which?_Flix</p>
+  </div>
 </div>
-
-
-
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

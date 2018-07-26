@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>DEPG-WDI Project 2</title>
-  <link href="https://fonts.googleapis.com/css?family=Merienda|Oswald" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Limelight|Poiret+One" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css" type="text/css">
   <style type="text/css">
@@ -14,16 +14,32 @@
     
     <!--<h1>Welcome!</h1>
     <h2>Having trouble picking a movie to watch?</h2>-->
-    <div class="wrapper">
-      <!--<div class="begincontainer">-->
-      <form class="begincontainer">
-        <a href="/auth" style="text-decortation: none">Begin</a>
-      </form>
-      <div class="footer">
-        <p style="align: right">.</p>
+    <div class="container">
+        <div class="row">
+          <div class = "col">
+            <div class = "begin-container">
+              <h1> Welcome to Which?_Flix</h1>
+              <p> What Movie Will You Watch Tonight?</p>
+              <a href="/auth" style="text-decortation: none" id="welcome-link"> Let Us Decide </a>
+            </div>
+            <div class="row">
+            </div>
+          </div>
       </div>
     </div>
-
+<div id="carouselMovieSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="https://fesapusewebsite.blob.core.windows.net/fathom/biglebowski-poster-3b44f87f597e68af6da589ba9fe83518.jpg" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://m.media-amazon.com/images/M/MV5BZTFjMjBiYzItNzU5YS00MjdiLWJkOTktNDQ3MTE3ZjY2YTY5XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://images-na.ssl-images-amazon.com/images/I/81F1NZ8hZGL._SY606_.jpg" alt="Third slide">
+    </div>
+  </div>
+</div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>

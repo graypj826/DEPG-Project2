@@ -4,12 +4,11 @@
 	<title></title>
 </head>
 <body>
-	<p> <%=user.username%> </p>
-
+	<p> <%=req.user.displayName%> </p> 
 
 	<img src="<%=user.profilePic%>"><br>
 	
-
+	display name : <%=user.displayName %><br>
 	username: <%=user.username%><br>
 	email: <%=user.email%><br>
   	Favorite Genre: <%=user.favoriteGenre%><br>
@@ -19,8 +18,7 @@
   	Movies Added To The Database: PlaceHolder <br>
   	Movie Recommendations History: PlaceHolder <br>
 	
-	<a href="/users/<%=user.id%>/edit"> Edit <%=user.username%> <%=user.name%></a>
-	<a href="/logout">Logout</a>
+
 	
 </body>
 </html>

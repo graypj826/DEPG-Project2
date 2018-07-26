@@ -7,7 +7,8 @@ const passport = require('passport')
 
 const User = require("../models/users")
 
-
+require("../passport/local-config");
+require("../passport/serializing");
 //google passport export
 
 // app.get('/auth/google',
@@ -27,17 +28,22 @@ const User = require("../models/users")
          // // show local login page // //
 
 router.get("/", (req, res) =>{
-		res.render("auth/login.ejs",{
-			message: req.flash("loginMessage")
-		});
+		res.render("auth/login.ejs",
+		// FLLLASSSSSSSHHHH{
+		// 	message: req.flash("loginMessage")
+		// }
+		);
 });
 
 		// local login logic 
-router.post("/login", passport.authenticate("local-login", {
-	successRedirect : "/",
-	failureRedirect : "/login",
-	failureFlash : true 
-}))
+router.post("/login", async(req, res, next) =>{ 
+	const passportCallback = passport.authenticate("local", {
+		successRedirect : "/auth",
+		failureRedirect : "/"})
+	passportCallback(req, res, next)
+		// failureFlash : true ////====> if time come back and make failure flash
+})
+
 
        // // processing Login  // //
 
@@ -101,24 +107,18 @@ router.post("/login", passport.authenticate("local-login", {
 
 // ============= GOOGLE ROUTES ============//
 
-// ==== send to google for authentication ==//
+router.get('/google',
+  passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/plus.login'] }));
 
-router.get("/auth/google", passport.authenticate("google", 
-	{scope: ["profile", "email"]
-}));
+router.get('/google/callback', 
+  passport.authenticate('google', { failureRedirect: '/login' }),
+  function(req, res) {
+    res.redirect('/landing');
+  });
 
-//=== callback after google has thumbsed up
+// 	//========== Login ==========//
 
-router.get("/auth/google/callback",
-	passport.authenticate("google",{
-		successRedirect : "/show",
-		failureRedirect : "/"
-}));
-	
-
-	//========== Login ==========//
-
-	// ===== login form =======//
+// 	// ===== login form =======//
 
 	// ==== processing login form ===//
 
@@ -141,50 +141,53 @@ router.get("/register", (req,res) => {
 });
 
    // // Processing Register Form // // 
-router.post("/register", passport.authenticate("local-signup", {
-		successRedirect : "/",
-		failureRedirect : "/register",
-		failureFlash : true 
-	}));
+router.post("/register", (req, res) =>{
+		const password = req.body.password;
+		const passwordHash = bcrypt.hashSync(password, bcrypt.genSaltSync(10));
 
-	// }) (req, res) =>{
-		// const password = req.body.password;
-		// const passwordHash = bcrypt.hashSync(password, bcrypt.genSaltSync(10));
+		const userDbEntry =  {};
 
-		// const userDbEntry =  {};
+		userDbEntry.username = req.body.username;
+		userDbEntry.email = req.body.email;
+		userDbEntry.password = passwordHash;
 
-		// userDbEntry.username = req.body.username;
-		// userDbEntry.email = req.body.email;
-		// userDbEntry.password = passwordHash;
-
-		// User.create(userDbEntry, (err, createdUser) => {
+		User.create(userDbEntry, (err, createdUser) => {
 	
-		// 	if(err){
-		// 		console.log(err)
-		// 		res.send(err)
-		// 	} else {
-		// 		// req.session.username = createdUser.username;
-		// 		// req.session.loggedIn = true;	
-		// 		res.send("success")
-		// 	}
-		// });	
+			if(err){
+				console.log(err)
+				res.send(err)
+			} else {
+				// req.session.username = createdUser.username;
+				// req.session.loggedIn = true;	
+				res.send("success")
+			}
+		});	
 
-// });
+});
 
 
 // // ======= Logout ======================//
-router.get("/logout", async (req, res) => {
-	req.session.destroy((err) => {
-		if(err){
-			res.send("error destroying session");	
-		} else {
-			//req.session.loggedIn = false;
-			res.redirect("/auth")
-		}
-	})
+router.get('/logout', function(req, res){
+  req.logout();
+  res.redirect('/');
+});
+
+// router.get("/logout", async (req, res) => {
+// 	req.session.destroy((err) => {
+// 		if(err){
+// 			res.send("error destroying session");	
+// 		} else {
+// 			//req.session.loggedIn = false;
+// 			res.redirect("/auth")
+// 		}
+// 	})
+// })
+
+///======= Success Path =======///
+
+router.get("/success", async (req, res) => {
+	res.send(`Good job, ${req.user.displayName}`)
 })
-
-
 
 
 
