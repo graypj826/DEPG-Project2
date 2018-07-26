@@ -63,3 +63,6 @@ typings/
 # next.js build output
 .next
 /node_modules
+
+# practice sessions
+/DAE-p2-practice
