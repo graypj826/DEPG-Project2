@@ -222,12 +222,25 @@ font-size: 55px;
 
 .movies-index-item{
 	display: inline-block;
-	background-color: gray;
+	background-color: rgba(19, 16, 0, 0.75);
 	color: white;
+	box-shadow: 2px 2px white;
+	text-shadow: .5px .5px white;
 }
 
 .movies-index-item a{
 	display: inline-block;
-	background-color: gray;
-	color: white;
+	color: gold;
+	margin: 2px 2px;
+}
+
+.movies-index-item img{
+	display: block;
+	height: 100px;
+	width: 80px;
+	margin: 0 auto;
+}
+
+#movie-index{
+	text-align: center;
 }
