@@ -1,40 +1,40 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	<header>
-		<h1> PROJECT 2 </h1>
-		<nav>
-			<a href="/movies"> Index </a>
-			<a href="/index"> Home </a>
-			<a href="/users"> Users </a>
-		</nav>
-	</header>
-	<main>
-	<h1> <%= movie.title %> </h1>
-
-	<img src="<%=movie.poster%>">
-
-	<section>
-
-		Title: <%= movie.title%>  
-		
-		Genre: <%= movie.genre%> 
-
-		Stars: <%= movie.stars%> 
-
-		Director: <%= movie.director%> 
-		
-		Rating: <%= movie.rating%> 
-	</section>
-
-	<a href="/movies/<%=movie.id%>/edit"> Edit This Movie </a>	
+<% include ../partials/_header.ejs %>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12 limelight-text"
+				<h1> <%= movie.title %> </h1>
+			</div>
+			<div class="col-12" id="show-movie-details">	<img src="<%=movie.poster%>">
+				<section class="poirot-text">
+					<div class="row">
+						<div class="col-5 movie-details"> Title: </div>
+						<div class=" movie-details col-7"> <%= movie.title%> </div> 
+					</div>
+					<div class="row">
+						<div class="col-5 movie-details"> Genre:</div>
+						<div class="col-7 movie-details"> <%= movie.genre%></div> 
+					</div>
+					<div class="row">
+						<div class="movie-details col-5"> Stars: </div>
+						<div class=" movie-details col-7"> <%= movie.stars%> </div>
+					</div>
+					<div class="row">
+						<div class="movie-details col-5">Director: </div>
+						<div class="movie-details col-7"> <%= movie.director%> </div> 
+					</div>
+					<div class="row">
+						<div class="movie-details col-5">Rating:</div> 
+						<div class=" movie-details col-7"><%= movie.rating%> </div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<div class="row links poirot-text">	
+			<a href="/movies/<%=movie.id%>/edit"><button> Edit This Movie</button> </a>	
+		</div>
+		</div>
 	<div class="footer">
         <p style="align: right">.</p>
-      </div>
-
-
+     </div>
 </body>
 </html>

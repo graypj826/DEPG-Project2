@@ -176,7 +176,7 @@ font-size: 18px;
 
 }
 
-.carousel {
+#carouselMovieSlidesOnly {
   width: 280px;
   height: 360px;
   margin: 0 auto 5% auto;
@@ -220,13 +220,13 @@ font-size: 55px;
 	height: 50px;
 }
 
-.movies-index-item{
+/*.movies-index-item{
 	display: inline-block;
 	background-color: rgba(19, 16, 0, 0.75);
 	color: white;
 	box-shadow: 2px 2px white;
 	text-shadow: .5px .5px white;
-}
+}*/
 
 .movies-index-item a{
 	display: inline-block;
@@ -234,13 +234,38 @@ font-size: 55px;
 	margin: 2px 2px;
 }
 
-.movies-index-item img{
+#movie-index-carousel{
+	text-align: center;
+	width: 70%;
+	margin:0 auto;
+	/*height: 60%;*/
+	box-shadow: 2px 2px rgba(19, 16, 0, 0.75);
+}
+
+#movie-index-carousel img{
+	height: 500px;
+	width: 250px;
+
+}
+
+
+/*.movies-index-item img{
 	display: block;
 	height: 100px;
 	width: 80px;
 	margin: 0 auto;
-}
+}*/
 
 #movie-index{
 	text-align: center;
+}
+
+.movie-details{
+	margin-right: 0;
+	display: inline;
+}
+
+.links{
+	text-align: right;
+	margin-left: 65%;
 }

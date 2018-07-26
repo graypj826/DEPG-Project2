@@ -1,27 +1,50 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	<header>
-		<h1> PROJECT 2 </h1>
-		<nav>
-			<a href="/movies"> Index </a>
-			<a href="/index"> Home </a>
-			<a href="/users"> Users </a>
-		</nav>
-	</header>
+<% include ../partials/_header.ejs %>
 	<main>
-		<form method="POST" action="/movies/<%=movie.id%>?_method=PUT">
-			Title: <input type="text" name="title" placeholder="<%=movie.title%>"> 
-			Genre: <input type="text" name="genre" placeholder="<%=movie.genre%>"> 
-			Poster : <input type="text" name="poster" placeholder="<%=movie.poster%>"> 
-			Stars : <input type="text" name="stars" placeholder="<%=movie.stars%>"> 
-			Director : <input type="text" name="director" placeholder="<%=movie.director%>"> 
-			Rating : <input type="text" name="rating" placeholder="<%=movie.rating%>"> 
-			<button type="submit"> Submit </button>
-		</form>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12">
+				<div class="row">
+						<form method="POST" action="/movies/<%=movie.id%>?_method=PUT">
+							<div class="col-12 poirot-text" >
+							<div class="row"> 
+								<div class="col-12">
+								<img src="<%=movie.poster%>">
+							</div>
+							<div class="row">
+								<div class="col-3"> Title: </div> 
+								<div class="col-9"> <input class="col-6" type="text" name="title" placeholder="<%=movie.title%>" value="<%=movie.title%>"></div>
+							</div>
+							<div class="row">
+								<div class="col-3"> Genre: </div>
+								<div class="col-9"> <input type="text" name="genre" placeholder="<%=movie.genre%>" value="<%=movie.genre%>"></div>
+							</div>
+							<div class="row">	
+								<div class="col-3"> Poster:</div>
+								<div class="col-9"> <input type="text" name="poster" placeholder="<%=movie.poster%>" value= "<%=movie.poster%>"> </div>
+							</div>
+							<div class="row">
+								<div class="col-3"> Stars:</div> 
+								<div class="col-9"> <input type="text" name="stars" placeholder="<%=movie.stars%>" value="<%=movie.stars%>"> </div>
+							</div>
+							<div class="row">	
+								<div class="col-3"> Director:</div> 
+								<div class="col-9"> <input type="text" name="director" placeholder="<%=movie.director%>" value="<%=movie.director%>"</div>
+							</div>
+							<div class="row">
+								<div class="col-3"> Rating: 
+								</div>	
+								<div class="col-9"> 
+								<input type="text" name="rating" placeholder="<%=movie.rating%>" value="<%=movie.rating%>"> </div>
+							</div>
+							<div class="row">
+								<div class="col-12"> <button type="submit"> Submit </button> </div>
+							</div>
+						</form>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>
 		<form method="POST" action="/movies/<%=movie.id%>?_method=DELETE">
 			<button type="submit" value="Delete Movie" name="delete"> Delete </button>
 
