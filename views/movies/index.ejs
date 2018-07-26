@@ -6,13 +6,13 @@
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
-  <div class="carousel-inner">
+  <div class="carousel-inner" id="movie-index-carousel">
     <div class="carousel-item active">
       <img class="d-block w-100" src="http://goto.game/wp-content/uploads/2017/11/big-lebowski.jpg" alt="First slide">
     </div>
 	<% for (let i = 0; i < movies.length; i++){%>
     	<div class="carousel-item">		
-    		<div class = "col-3 movies-index-item poirot-text">
+    		<div class = "movies-index-item poirot-text">
     			 <img class="d-block w-100" src="<%=movies[i].poster%>" alt="Second slide">
           		<a href="/movies/<%=movies[i].id%>"><%=movies[i].title %></a>
          	</div>

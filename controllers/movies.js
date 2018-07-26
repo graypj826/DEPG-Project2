@@ -112,15 +112,18 @@ router.post("/", async (req, res) => {
 router.put("/:id", (req, res) =>{
 
 	Movies.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedMovie) =>{
+		console.log(req.body)
+		console.log(updatedMovie)
 		if (err){
 			console.log(error, "error")
 			res.send(error)
 		} else {
-			res.redirect("/movies")
+
+			res.redirect(`/movies/${req.params.id}`)
 		}	
 	})	
 
-})
+});
 
 router.delete("/:id", (req, res) => {
 	Movies.findByIdAndRemove(req.params.id, (err, removedMovie) => {
