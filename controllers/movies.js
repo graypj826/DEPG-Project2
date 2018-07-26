@@ -57,7 +57,7 @@ router.get("/new", async (req, res) => {
 router.get("/:id/edit", (req, res) => {
 
 	Movies.findById(req.params.id, (err, foundMovie) => {
-
+		console.log(foundMovie)
 		if(err){
 			console.log(err)
 			res.send(err)
@@ -77,10 +77,10 @@ router.get("/:id/edit", (req, res) => {
 
 
 router.get("/:id", (req, res) => {
-	
+	console.log("getting to the show page")
 	Movies.findById(req.params.id, (err, foundMovie) =>{
 		if (err){
-
+			console.log(err)
 			res.send(err)
 		
 		} else {

@@ -1,8 +1,8 @@
 * {
 	/*background-color: linear-gradient(right, grey, black);*/
-	bottom: auto;/*
+	/*bottom: auto;*//*
 	/*border: 5px solid black;*/
-	
+
 	
 }
 
@@ -174,4 +174,73 @@ font-size: 18px;
 	text-shadow: 1px .5px gray;
 	box-shadow: 1px 2px gray;;
 
+}
+
+.carousel {
+  width: 280px;
+  height: 360px;
+  margin: 0 auto 5% auto;
+  box-shadow: 14px 14px black;
+}
+
+.poirot-text {
+font-family: 'Poiret One', cursive;
+color: gold;
+background-color: rgba(19, 16, 0, 0.75);
+font-size: 25px;
+}
+
+.limelight-text {
+font-family: 'LimeLight', cursive;
+color: gold;
+background-color: rgba(19, 16, 0, 0.75);
+font-size: 55px;
+}
+
+.movie-link{
+	display: inline-block;
+}
+
+.users-link{
+	display: inline-block;
+}
+
+#landing-links-movies-users{
+	margin:0 auto;
+	text-align:center;
+	position: absolute;
+    margin-bottom: 0;
+}
+
+#carouselMovieSlidesOnly{
+	display:block;
+}
+
+.space{
+	height: 50px;
+}
+
+.movies-index-item{
+	display: inline-block;
+	background-color: rgba(19, 16, 0, 0.75);
+	color: white;
+	box-shadow: 2px 2px white;
+	text-shadow: .5px .5px white;
+}
+
+.movies-index-item a{
+	display: inline-block;
+	color: gold;
+	margin: 2px 2px;
+}
+
+.movies-index-item img{
+	display: block;
+	height: 100px;
+	width: 80px;
+	margin: 0 auto;
+}
+
+#movie-index{
+	text-align: center;
 }
