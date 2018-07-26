@@ -39,6 +39,9 @@ request(`https://api.themoviedb.org/3/movie/${randId}?api_key=32d3d0cbaf9018e6f6
 		return;
 	}
 	console.log(dataObj.release_date);
+
+	res.render
+
 	} else {
 	console.log('INVALID QUERY randId ', randId);
 	getRandomMovie();
