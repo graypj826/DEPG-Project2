@@ -4,6 +4,30 @@
 	<title></title>
 </head>
 <body>
+<div class = "btn-group">
+   <button type = "button" class = "btn btn-default">FEEL LUCKY, DO YA?</button>
+   
+   <button type = "button" class = "btn btn-default dropdown-toggle" data-toggle = "dropdown">
+      <span class = "caret"></span>
+      <span class = "sr-only">Filter by Genre</span>
+   </button>
+   
+   <ul class = "dropdown-menu" role = "menu">
+   	<div class="btn-group" data-toggle="buttons">
+   	<% for (let i=0; i<genreSelect.length;i++) { %>
+   		<li><label class="btn btn-primary">
+    	<input type="radio" name="options" id="<%genreSelect.name%>" autocomplete="off"> <%genreSelect%>
+  			</label>
+  		</li>
+   	<% } %>
+      
+      <li class = "divider"></li>
+      <li><a href = "#">GO!</a></li>
+   </ul>
+</div>
+
+
 	<h1> Which Movie Do You Want To Watch </h1>
+	
 </body>
 </html>

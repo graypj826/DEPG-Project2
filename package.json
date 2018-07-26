@@ -28,6 +28,7 @@
     "connect-flash": "^0.1.1",
     "connect-mongodb-session": "^2.0.3",
     "cookie-parser": "^1.4.3",
+    "dot-env": "0.0.1",
     "dotenv": "^6.0.0",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
@@ -42,6 +43,7 @@
     "passport-google-oauth": "^1.0.0",
     "passport-google-oauth20": "^1.0.0",
     "passport-local": "^1.0.0",
-    "passport-local-mongoose": "^5.0.1"
+    "passport-local-mongoose": "^5.0.1",
+    "request": "^2.87.0"
   }
 }
