@@ -52,6 +52,12 @@ app.use(passport.initialize());
 
 app.use(passport.session()); //persistent login sessions
 
+app.use((req, res, next)=>{
+  res.locals.user = req.user
+  next();
+});
+
+
 app.use(flash()); //use connect-flash for flash messages stored in session (possibly send error messagees to user)
 
 // passport.use(new LocalStrategy(User.authenticate()));
@@ -91,6 +97,7 @@ app.get('/', (req,res) => {
 });
 
 app.get('/landing', (req,res) => {
+  console.log(req.user.id, "this is the req.user.id")
 	res.render('landingPage.ejs');
 });
 
