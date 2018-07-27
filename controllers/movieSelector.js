@@ -63,6 +63,7 @@ request(`https://api.themoviedb.org/3/movie/${randId}?api_key=32d3d0cbaf9018e6f6
 		return;
 	}
 	console.log(dataObj.release_date);
+	console.log(dataObj);
 
 	res.render('movieSelector/hbo.ejs', {
 		movieSelected:dataObj

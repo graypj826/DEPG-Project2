@@ -166,6 +166,15 @@ font-size: 25px;
 text-shadow: .5px .5px black
 }
 
+.poirot-white-text-rgba {
+font-family: 'Poiret One', cursive;
+color: white;
+background-color: rgba(19, 16, 0, 0.75);
+font-size: 25px;
+text-shadow: .5px .5px black
+display:inline-block;
+}
+
 .poirot-black-text {
 font-family: 'Poiret One', cursive;
 color: black;
@@ -352,5 +361,9 @@ img{
 }
 
 #movie-edit-details-container{
+	background-color: rgba(228, 194, 21, 0.95);
+}
+
+#hbo-title {
 	background-color: rgba(228, 194, 21, 0.95);
 }

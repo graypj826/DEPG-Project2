@@ -2,25 +2,29 @@
 
 <div class="container-fluid">
 <div class="row">
-	<div class="col limelight-text">
-		<h1> Feel Lucky, Do Ya? </h1>
+	<div class="col limelight-white-text" id="hbo-title">
+		<h1>Here's What Yer Watchin'!</h1>
 	</div>
 </div>
 
-<div class = "btn-group">
-   <a href="/selector/pick"><button type = "button" class = "btn btn-default">Yes.</button></a>
-   
-   
-</div>
+
 
 <div id = "randmovie">
-    <%=movieSelected.title%>
-
+<div class="poirot-white-text-rgba">
+	<%=movieSelected.overview%><br>
+    <%=movieSelected.title%><br>
+    
     <img src="http://image.tmdb.org/t/p/w500///<%=movieSelected.poster_path%>"/>
-
+    <%=movieSelected.tagline%>
+</div>
 </div>
 
-<div class="row space"></div>
+<!--<div class="row space"></div>-->
+<div class = "btn-group">
+   <a href="/selector/pick"><button type = "button" class = "btn btn-default">Not So Lucky?</button></a>
+   
+   
+</div>
 <div class="row" id="landing-links-movies-users">
 	<div class="col-6 poirot-text movie-link">
 		<p> View Movies Others Have Suggested </p>
