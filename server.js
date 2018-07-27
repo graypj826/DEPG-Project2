@@ -12,9 +12,10 @@ const LocalStrategy			= require("passport-local").Strategy
 const passportLocalMongoose = require("passport-local-mongoose")
 const flash					= require("connect-flash")
 const cookieParser 			= require("cookie-parser")
+const assert        = require("assert");
 
 ////require database, .env and passport
-require('./db/db.js');
+
 require("dotenv").config();
  
 const store = new MongoDBStore({
@@ -31,7 +32,8 @@ store.on('error', function(error) {
   assert.ifError(error);
   assert.ok(false);
 });
- 
+
+require('./db/db.js'); 
 
 ///////setup sessions
 app.use(require('express-session')({

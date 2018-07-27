@@ -357,13 +357,20 @@ img{
 }
 
 #show-movie-details{
-	background-color: rgba(228, 194, 21, 0.95);
+	background-color: rgba(228, 194, 21, 0.85);
 }
 
 #movie-edit-details-container{
-	background-color: rgba(228, 194, 21, 0.95);
+	background-color: rgba(228, 194, 21, 0.85);
+	text-align: center;
+}
+
+
+#movie-edit-details-container div{
+	margin: 0 auto;
 }
 
 #hbo-title {
 	background-color: rgba(228, 194, 21, 0.95);
 }
+
