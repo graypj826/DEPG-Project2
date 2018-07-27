@@ -213,7 +213,7 @@ text-shadow: 0 0 20px white
 
 #movie-index-carousel{
 	text-align: center;
-	width: 70%;
+	width: 60%;
 	margin:0 auto;
 	/*height: 60%;*/
 	box-shadow: 2px 2px rgba(19, 16, 0, 0.75);
@@ -221,10 +221,13 @@ text-shadow: 0 0 20px white
 
 #movie-index-carousel img{
 	height: 500px;
-	width: 250px;
 
 }
 
+#movie-index-carousel a{
+	background-color: rgba(19, 16, 0, 0.75);
+
+}
 
 /*.movies-index-item img{
 	display: block;
@@ -304,4 +307,23 @@ a button{
 
 img{
 	box-shadow: 0 0 20px black
+}
+
+#feel-lucky{
+	background-color: rgba(228, 194, 21, 0.95);
+	margin:0 auto;
+}
+
+#feel-lucky h1, #feel-lucky a{
+	background-color: rgba(228, 194, 21, 0.95);
+	margin:0 auto;
+	padding: 0;
+}
+
+.space{
+	height: 55px;
+}
+
+.carousel-row{
+	margin: 15px auto 15px auto;
 }
