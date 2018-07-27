@@ -1,11 +1,12 @@
 <% include ../partials/_header.ejs %>
 	<main>
 	<div class="container-fluid">
-		<div class="row">
+		<div class="row" id="movie-edit-details-container">
 			<div class="col-12">
 				<div class="row">
+					<div class="col-12 poirot-black-text" >
 						<form method="POST" action="/movies/<%=movie.id%>?_method=PUT">
-							<div class="col-12 poirot-black-text" >
+							
 								<div class="row"> 
 									<div class="col-12">
 										<img src="<%=movie.poster%>">
@@ -40,16 +41,15 @@
 							<div class="row">
 								<div class="col-12"> <button type="submit"> Submit </button> </div>
 							</div>
-						</div>	
-					</form>
+						</form>
+					</div>		
 				</div>
 			</div>
 		</div>
-	</div>
+	
 		<form method="POST" action="/movies/<%=movie.id%>?_method=DELETE">
-			<button type="submit" value="Delete Movie" name="delete"> Delete </button>
-
-
+			<button type="submit" value="Delete Movie" name="delete"> Delete </button>	
+	</div>
 	</main>
 
 </body>
