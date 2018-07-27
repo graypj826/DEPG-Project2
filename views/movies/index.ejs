@@ -14,7 +14,9 @@
     	<div class="carousel-item">		
     		<div class = "movies-index-item poirot-text">
     			 <img class="d-block w-100" src="<%=movies[i].poster%>" alt="Second slide">
-          		<a href="/movies/<%=movies[i].id%>"><%=movies[i].title %></a>
+            <div id="carousel-movie-title">
+            	<a href="/movies/<%=movies[i].id%>" ><%=movies[i].title %></a>
+            </div>
          	</div>
          </div>	
     <%}%>
