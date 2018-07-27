@@ -16,8 +16,8 @@ const userSchema = new mongoose.Schema({
 	favoriteDirector: String,
 	favoriteMovie	: String,
 	favoriteActor	: String,
-	moviesCreated	: [Movies.schema],
-  	moviesHistory	: []
+	// moviesCreated	: [Movies.schema],
+ //  	moviesHistory	: []
   	
 });
 

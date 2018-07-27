@@ -1,19 +1,26 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	<h1> View Which?_Flix's Other Critics </h1>
-	<p>
-	<% for(let i = 0; i < users.length; i++){ %>
-		<a href="/users/<%=users[i].id%>"><%=users[i].username%></a></p>
 
-	<%}%>
+<% include ../partials/_header.ejs %>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12 limelight-text">
+				<h1> View Which?_Flix's Other Critics </h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 poirot-text">		
+				<% for(let i = 0; i < users.length; i++){ %>
+					<a href="/users/<%=users[i].id%>"><%=users[i].username%></a></p>
 
-	<a href="/users/edit"> Edit <%=users.username%> <%=users.name%></a>
-	
-	<a href="/logout">Logout</a>
-
+				<%}%>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 poirot-text" id="user-index-links">	
+				<a href="/users/edit"> <button> Edit Your Profile </button></a>
+				
+				<a href="auth/logout"><button> Logout </button></a>	
+			</div>	
+		</div>
+	</div>
 </body>
 </html>

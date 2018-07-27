@@ -1,25 +1,93 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	<p> <%=req.user.displayName%> </p> 
+<% include ../partials/_header.ejs %>
 
-	<img src="<%=user.profilePic%>"><br>
-	
-	display name : <%=user.displayName %><br>
-	username: <%=user.username%><br>
-	email: <%=user.email%><br>
-  	Favorite Genre: <%=user.favoriteGenre%><br>
-	Favorite Director:  <%=user.favoriteDirector%><br>
-	favoriteMovie: <%=user.favoriteMovie%><br>
-	favoriteActor: <%=user.favoriteActor%><br>
-  	Movies Added To The Database: PlaceHolder <br>
-  	Movie Recommendations History: PlaceHolder <br>
-	
-
-	
+<div class="container-fluid">
+	<div class="row limelight-text">
+		<div class="col-12"	
+		<p> <%user.displayName%> </p> 
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12 profile-pic">
+			<img src="<%=user.profilePic%>">
+		</div>
+	</div>
+	<div class="row poirot-text user-profile-container">
+		<div class="col-12">
+			<div class="row">
+				<div class = "col-3">	
+					username:
+				</div>
+				<div class = "col-8">
+					<%=user.username%>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-3">
+					email: 
+				</div>
+				<div class="col-8">	
+					<%=user.email%>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-3">
+			  	profile picture: 
+			  	</div>
+			  	<div class="col-8">
+				   <%=user.profilePic%>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-3">
+			  		Favorite Genre: 
+			  	</div>
+			  	<div class="col-8">
+				  	<%=user.favoriteGenre%>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-3">
+					Favorite Director:  
+				</div>
+				<div class="col-8">	
+					<%=user.favoriteDirector%>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-3">	
+					Favorite Movie: 
+				</div>
+				<div class="col-8">
+					<%=user.favoriteMovie%>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-3">
+					Favorite Actor: 
+				</div>
+				<div class="col-8">	
+					<%=user.favoriteActor%>
+				</div>
+			</div>
+			<div class="row">
+			</form> 
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-4">
+			<a href="/users/edit"> <button> Edit Your Profile </button></a>
+		</div>
+		<div class="col-4">
+			<form method="POST" action="/users/<%=user.id%>?_method=DELETE">
+					<button type="submit" value="Delete Account" name="delete"> Delete Your Account</button>
+			</form>
+		</div>
+		<div class="col-4">
+			<a href="/auth/logout"><button> Logout of Account </button></a>
+		</div>
+	</div>
+</div>	
 </body>
 </html>
-
+</body>
+</html>

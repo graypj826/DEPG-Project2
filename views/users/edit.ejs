@@ -1,28 +1,95 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	<p> Edit <%=user.displayName%> </p>
-
-	<img src="<%=user.profilePic%>">
-
-	<form method="POST" action="/users/<%=user.id%>?_method=PUT">
-		username: <input type="text" name="username" placeholder = "<%=user.username%>">
-		email: <input type="text" name="email" placeholder = "<%=user.email%>">
-	  	profile picture: <input type="text" name="profilePic" placeholder = "<%=user.profilePic%>">
-	  	Favorite Genre: <input type="text" name="favoriteGenre" placeholder = "<%=user.favoriteGenre%>">
-		Favorite Director:  <input type="text" name="favoriteDirector" placeholder = "<%=user.favoriteDirector%>">
-		Favorite Movie: <input type="text" name="favoriteMovie" placeholder = "<%=user.favoriteMovie%>">
-		Favorite Actor: <input type="text" name="favoriteActor" placeholder = "<%=user.favoriteActor%>">
-	  	<button type="submit"> Save <%=user.username%></button>
-	</form> 
-	<form method="POST" action="/users/<%=user.id%>?_method=DELETE">
-			<button type="submit" value="Delete Account" name="delete"> Delete Your Account</button>
-	</form>
-	<a href="/logout">Logout</a>
-	
+<% include ../partials/_header.ejs %>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12 limelight-text">	
+				<p> Edit Your Profile Page </p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<img src="<%=user.profilePic%>">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 poirot-text user-profile-container">
+				<form method="POST" action="/users/<%=user.id%>?_method=PUT">
+				<div class="row">
+					<div class = "col-3">	
+						username:
+					</div> 
+					<div class = "col-8">
+						<textarea type="text" name="username" placeholder = "<%=user.username%>" value = "<%=user.username%>"><%=user.username%></textarea>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-3">
+						email: 
+					</div>
+					<div class="col-8">	
+						<textarea type="text" name="email" placeholder = "<%=user.email%>" value = "<%=user.email%>"><%=user.email%></textarea>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-3">
+				  	profile picture: 
+				  	</div>
+				  	<div class="col-8">
+					  	<textarea type="text" name="profilePic" placeholder = "<%=user.profilePic%>" value = "<%=user.profilePic%>"><%=user.profilePic%></textarea>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-3">
+				  		Favorite Genre: 
+				  	</div>
+				  	<div class="col-8">
+					  	<textarea type="text" name="favoriteGenre" placeholder = "<%=user.favoriteGenre%>" value = "<%=user.favoriteGenre%>"><%=user.favoriteGenre%></textarea>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-3">
+						Favorite Director:  
+					</div>
+					<div class="col-8">
+						<textarea type="text" name="favoriteDirector" placeholder = "<%=user.favoriteDirector%>" value = "<%=user.favoriteDirector%>"><%=user.favoriteDirector%></textarea>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-3">
+					Favorite Movie: 
+					</div>
+					<div class="col-8">	
+						<textarea type="text" name="favoriteMovie" placeholder = "<%=user.favoriteMovie%>" value = "<%=user.favoriteMovie%>"><%=user.favoriteMovie%></textarea>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-3">	
+						Favorite Actor: 
+					</div>
+					<div class="col-8">
+						<textarea type="text" name="favoriteActor" placeholder = "<%=user.favoriteActor%>" value = "<%=user.favoriteActor%>"><%=user.favoriteActor%></textarea>
+					</div>	
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<button type="submit"> Save <%=user.username%></button>
+					</div>
+				</div>
+			</form>
+			</div> 
+		</div>
+		<!-- <div class="space">
+		</div> -->
+		<div class="row poirot-text links delete">
+			<div class="col-5">
+				<form method="POST" action="/users/<%=user.id%>?_method=DELETE">
+						<button type="submit" value="Delete Account" name="delete"> Delete Your Account</button>
+				</form>
+			</div>
+			<div class="col-5 logout">
+				<a href="/logout"><button> Logout Of Account </button></a>
+			</div>
+		</div>
+	</div>	
 </body>
 </html>
 </body>
