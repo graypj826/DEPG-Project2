@@ -16,6 +16,10 @@ const assert        = require("assert");
 
 ////require database, .env and passport
 
+
+
+port = process.env.PORT || 3000;
+
 require("dotenv").config();
  
 const store = new MongoDBStore({
@@ -107,6 +111,6 @@ app.get('/landing', (req,res) => {
 
 ////set up launch///////////////////////////////////
 
-app.listen(3000, () => {
+app.listen(port, () => {
 	console.log('proj2 is listening on 3000');
 });
