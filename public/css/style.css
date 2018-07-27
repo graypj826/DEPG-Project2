@@ -66,9 +66,14 @@ color: gold;
 margin: 35% auto;
 /*margin-left: 100px;	grid-column: 1 / 18;
 	grid-row: 6;*/
-box-shadow: 6px 6px 2px 1px rgba(0,0,0,.2);
-text-shadow: 2px 1px black;
-}  
+box-shadow: 0 0 50px rgba(251, 247, 228, 0.95);
+text-shadow: 0 0 50px rgba(251, 247, 228, 0.85);
+}
+
+.begin-container a{
+text-shadow: 0 0 20px rgba(251, 247, 228, 0.65);
+}
+
 
 .begin-container h1{
 /*text-align: center;*/
@@ -99,51 +104,19 @@ font-size: 40px;
 }
 */
 
-.text-container .row{
-text-align: right;
+#login{
+text-align: center;
 font-family: 'Poiret One', cursive;
 color: gold;
-font-size: 18px;
+font-size: 28px;
 /*	grid-column: 2 / 18;
 	grid-row: 6;*/
-	box-shadow: 6px 6px 2px 1px rgba(0,0,0,.2);
+box-shadow: 0 0 80px rgba(251, 247, 228, 0.95);
 background-color: black;
-margin: 0;
+margin-top: 25%;
 width: 100%;
+text-shadow: 1px .5px gray;
 }
-
-/*.login-container:hover {
-	background-color: lightgrey;
-	color: black;
-}*/
-
-/*.register-container {
-
-font-family: 'Poiret One', cursive;
-transition: background-color 2s;
-transition: color 2s;
-color: black;
-font-size: 18px;
-	grid-column: 2 / 18;
-	grid-row: 2;
-	box-shadow: 6px 6px 2px 1px rgba(0,0,0,.2);
-}*/
-
-/*.register-container:hover {
-	background-color: darkgrey;
-	color: white;
-}*/
-/*
-.movies-container {
-transition: background-color 2s;
-transition: color 2s;
-font-family: 'Oswald', sans-serif;
-color: black;
-font-size: 18px;
-	grid-column: 2 / 6;
-	grid-row: 5;
-	box-shadow: 6px 6px 2px 1px rgba(0,0,0,.2);
-}*/
 
 .footer {
 	background-image: initial;
@@ -165,14 +138,8 @@ font-size: 18px;
 
 #google-signin{
 	text-align: right;
-	margin-left: 50%;
-
-}
-
-#login{
-	margin-top: 35%;
-	text-shadow: 1px .5px gray;
-	box-shadow: 1px 2px gray;;
+	margin-right: 5%;
+	margin-left: 45%;
 
 }
 
@@ -186,15 +153,17 @@ font-size: 18px;
 .poirot-text {
 font-family: 'Poiret One', cursive;
 color: gold;
-background-color: rgba(19, 16, 0, 0.75);
+/*background-color: rgba(19, 16, 0, 0.75);*/
 font-size: 25px;
+text-shadow: .5px .5px white
 }
 
 .limelight-text {
 font-family: 'LimeLight', cursive;
 color: gold;
-background-color: rgba(19, 16, 0, 0.75);
+
 font-size: 55px;
+text-shadow: 1px 1px white
 }
 
 .movie-link{
@@ -267,5 +236,48 @@ font-size: 55px;
 
 .links{
 	text-align: right;
-	margin-left: 65%;
+	margin-left: 5%;
 }
+
+.delete{
+	text-align: right;
+	margin: 5%;
+
+}
+
+.logout{
+	text-align: right;
+	margin-left: 5%;
+}
+
+.user-profile-container{
+	display: block;
+	background-color: rgba(19, 16, 0, 0.85);
+	text-align: center;
+	margin:0 auto;
+	text-shadow: .5px .5px white
+}
+
+.save-profile-container button{
+	margin:0 auto;
+	color:gold;
+}
+
+
+textarea{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#landing-links-movies-users{
+	background-color: rgba(19, 16, 0, 0.75);
+	margin: 0 auto;
+	width: 100%;
+}
+
+.navbar{
+  background-color:rgba(19, 16, 0, 0.75);
+  background-image: none;
+  background-repeat: no-repeat;
+ }
