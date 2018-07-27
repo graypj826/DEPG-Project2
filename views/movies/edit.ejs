@@ -5,42 +5,43 @@
 			<div class="col-12">
 				<div class="row">
 						<form method="POST" action="/movies/<%=movie.id%>?_method=PUT">
-							<div class="col-12 poirot-text" >
-							<div class="row"> 
-								<div class="col-12">
-								<img src="<%=movie.poster%>">
-							</div>
-							<div class="row">
-								<div class="col-3"> Title: </div> 
-								<div class="col-9"> <input class="col-6" type="text" name="title" placeholder="<%=movie.title%>" value="<%=movie.title%>"></div>
-							</div>
-							<div class="row">
-								<div class="col-3"> Genre: </div>
-								<div class="col-9"> <input type="text" name="genre" placeholder="<%=movie.genre%>" value="<%=movie.genre%>"></div>
-							</div>
-							<div class="row">	
-								<div class="col-3"> Poster:</div>
-								<div class="col-9"> <input type="text" name="poster" placeholder="<%=movie.poster%>" value= "<%=movie.poster%>"> </div>
-							</div>
-							<div class="row">
-								<div class="col-3"> Stars:</div> 
-								<div class="col-9"> <input type="text" name="stars" placeholder="<%=movie.stars%>" value="<%=movie.stars%>"> </div>
-							</div>
-							<div class="row">	
-								<div class="col-3"> Director:</div> 
-								<div class="col-9"> <input type="text" name="director" placeholder="<%=movie.director%>" value="<%=movie.director%>"</div>
-							</div>
-							<div class="row">
-								<div class="col-3"> Rating: 
-								</div>	
-								<div class="col-9"> 
-								<input type="text" name="rating" placeholder="<%=movie.rating%>" value="<%=movie.rating%>"> </div>
-							</div>
+							<div class="col-12 poirot-black-text" >
+								<div class="row"> 
+									<div class="col-12">
+										<img src="<%=movie.poster%>">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-3"> Title: </div> 
+									<div class="col-8"> <textarea type="text" name="title" placeholder="<%=movie.title%>" value="<%=movie.title%>"><%=movie.title%></textarea></div>
+								</div>
+								<div class="row">
+									<div class="col-3"> Genre: </div>
+									<div class="col-8"> <textarea type="text" name="genre" placeholder="<%=movie.genre%>" value="<%=movie.genre%>"><%=movie.genre%></textarea></div>
+								</div>
+								<div class="row">	
+									<div class="col-3"> Poster:</div>
+									<div class="col-8"> <textarea type="text" name="poster" placeholder="<%=movie.poster%>" value= "<%=movie.poster%>"><%=movie.poster%></textarea> </div>
+								</div>
+								<div class="row">
+									<div class="col-3"> Stars:</div> 
+									<div class="col-8"> <textarea type="text" name="stars" placeholder="<%=movie.stars%>" value="<%=movie.stars%>"><%=movie.stars%></textarea></div>
+								</div>
+								<div class="row">	
+									<div class="col-3"> Director:</div> 
+									<div class="col-8"> <textarea type="text" name="director" placeholder="<%=movie.director%>" value="<%=movie.director%>"><%=movie.director%></textarea></div>
+								</div>
+								<div class="row">
+									<div class="col-3"> Rating: 
+									</div>	
+									<div class="col-8"> 
+									<textarea type="text" name="rating" placeholder="<%=movie.rating%>" value="<%=movie.rating%>"><%=movie.rating%></textarea></div>
+								</div>
 							<div class="row">
 								<div class="col-12"> <button type="submit"> Submit </button> </div>
 							</div>
-						</form>
-					</div>	
+						</div>	
+					</form>
 				</div>
 			</div>
 		</div>

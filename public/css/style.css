@@ -158,6 +158,22 @@ font-size: 25px;
 text-shadow: .5px .5px white
 }
 
+.poirot-white-text {
+font-family: 'Poiret One', cursive;
+color: white;
+/*background-color: rgba(19, 16, 0, 0.75);*/
+font-size: 25px;
+text-shadow: .5px .5px black
+}
+
+.poirot-black-text {
+font-family: 'Poiret One', cursive;
+color: black;
+/*background-color: rgba(19, 16, 0, 0.75);*/
+font-size: 25px;
+text-shadow: 0 0 20px white
+}
+
 .limelight-text {
 font-family: 'LimeLight', cursive;
 color: gold;
@@ -213,7 +229,7 @@ text-shadow: 0 0 20px white
 
 #movie-index-carousel{
 	text-align: center;
-	width: 70%;
+	width: 60%;
 	margin:0 auto;
 	/*height: 60%;*/
 	box-shadow: 2px 2px rgba(19, 16, 0, 0.75);
@@ -221,10 +237,13 @@ text-shadow: 0 0 20px white
 
 #movie-index-carousel img{
 	height: 500px;
-	width: 250px;
 
 }
 
+#carousel-movie-title{
+	background-color: rgba(19, 16, 0, 0.75);
+
+}
 
 /*.movies-index-item img{
 	display: block;
@@ -240,6 +259,9 @@ text-shadow: 0 0 20px white
 .movie-details{
 	margin-right: 0;
 	display: inline;
+	line-height: 25px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .links{
@@ -304,4 +326,31 @@ a button{
 
 img{
 	box-shadow: 0 0 20px black
+}
+
+#feel-lucky{
+	background-color: rgba(228, 194, 21, 0.95);
+	margin:0 auto;
+}
+
+#feel-lucky h1, #feel-lucky a{
+	background-color: rgba(228, 194, 21, 0.95);
+	margin:0 auto;
+	padding: 0;
+}
+
+.space{
+	height: 55px;
+}
+
+.carousel-row{
+	margin: 15px auto 15px auto;
+}
+
+#show-movie-details{
+	background-color: rgba(228, 194, 21, 0.95);
+}
+
+#movie-edit-details-container{
+	background-color: rgba(228, 194, 21, 0.95);
 }
