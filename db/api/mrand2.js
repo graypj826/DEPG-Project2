@@ -1,5 +1,8 @@
+
 var request = require('request');
 
+function getRandomMovie() {
+console.log('function started');
 var randId = Math.floor((Math.random() * 522000) +8);
 console.log(randId);
 
@@ -26,13 +29,26 @@ request(`https://api.themoviedb.org/3/movie/${randId}?api_key=32d3d0cbaf9018e6f6
 			console.log(dataObj.title);
 		} else {
 		console.log('INVALID TITLE');
+		getRandomMovie();
+		return;
 		}
 		console.log(dataObj.spoken_languages);
 		} else {
-		console.log('INVALID REGION')
+		console.log('INVALID REGION');
+		getRandomMovie();
+		return;
 	}
 	console.log(dataObj.release_date);
+
+	res.render
+
 	} else {
 	console.log('INVALID QUERY randId ', randId);
+	getRandomMovie();
+	return;
 }
 });
+
+
+}
+getRandomMovie();
