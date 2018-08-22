@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/kaliforniaco/DEPG-Project2.git"
   },
+  "engines": {
+    "node": "^10.8.0"
+  },
   "keywords": [
     "netflix",
     "random",
@@ -39,6 +42,7 @@
     "mongod": "^2.0.0",
     "mongoose": "^5.2.4",
     "mongoose-findorcreate": "^3.0.0",
+    "node": "^10.8.0",
     "omdb-client": "^2.0.0",
     "passport": "^0.4.0",
     "passport-google-oauth": "^1.0.0",
