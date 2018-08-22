@@ -14,11 +14,10 @@ const flash					= require("connect-flash")
 const cookieParser 			= require("cookie-parser")
 const assert        = require("assert");
 
+
 ////require database, .env and passport
 
-
-
-port = process.env.PORT || 3000;
+const port = process.env.PORT || 7000;
 
 require("dotenv").config();
  
@@ -112,5 +111,5 @@ app.get('/landing', (req,res) => {
 ////set up launch///////////////////////////////////
 
 app.listen(port, () => {
-	console.log('proj2 is listening on 3000');
+	console.log(`Server is listening on port: ${port}`);
 });
