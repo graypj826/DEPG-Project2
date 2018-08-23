@@ -12,9 +12,9 @@ const User = require("../models/users")
 //   credentials (in this case, an accessToken, refreshToken, and Google
 //   profile), and invoke a callback with a user object.
 passport.use(new GoogleStrategy({
-  oAuthCallback: process.env.oAuthCallback,
-  oAuthConsumerSecret: process.env.oAuthConsumerSecret,
-  oAuthKey: process.env.oAuthKey,
+    clientID: process.env.oAuthKey,
+    clientSecret: process.env.oAuthConsumerSecret,
+    callbackURL: process.env.oAuthCallback,
   },
   function(accessToken, refreshToken, profile, done) {
   	console.log("=============This is the google profile==========")
@@ -24,4 +24,3 @@ passport.use(new GoogleStrategy({
        });
   }
 ));
-
