@@ -4,7 +4,6 @@ var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 
 const User = require("../models/users")
 
-require("../.env")
 
 
 
