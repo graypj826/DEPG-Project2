@@ -20,24 +20,24 @@ const assert        = require("assert");
 
 
 
-const port = process.env.PORT || 3000 || 7000;
+const port = process.env.PORT || 3000
 
 
  
-const store = new MongoDBStore({
-  uri: process.env.MONGODB_URI,
-  collection: 'mySessions'
-});
+// const store = new MongoDBStore({
+//   uri: process.env.MONGODB_URI,
+//   collection: 'mySessions'
+// });
  
-store.on('connected', function() {
-  store.client; // The underlying MongoClient object from the MongoDB driver
-});
+// store.on('connected', function() {
+//   store.client; // The underlying MongoClient object from the MongoDB driver
+// });
  
-// Catch errors
-store.on('error', function(error) {
-  assert.ifError(error);
-  assert.ok(false);
-});
+// // Catch errors
+// store.on('error', function(error) {
+//   assert.ifError(error);
+//   assert.ok(false);
+// });
 
 require('./db/db'); 
 
