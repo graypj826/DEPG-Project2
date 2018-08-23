@@ -16,13 +16,7 @@ const assert        = require("assert");
 
 
 ////require database, .env and passport
-const aws = require('aws-sdk');
 
-let s3 = new aws.S3({
-  oAuthCallback: process.env.oAuthCallback,
-  oAuthConsumerSecret: process.env.oAuthConsumerSecret,
-  oAuthKey: process.env.oAuthKey,
-});
 
 
 
