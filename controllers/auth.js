@@ -38,7 +38,7 @@ router.get("/", (req, res) =>{
 		// local login logic 
 router.post("/login", async(req, res, next) =>{ 
 	const passportCallback = passport.authenticate("local", {
-		successRedirect : "/auth",
+		successRedirect : "/landing",
 		failureRedirect : "/"})
 	passportCallback(req, res, next)
 		// failureFlash : true ////====> if time come back and make failure flash
