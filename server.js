@@ -22,7 +22,7 @@ const assert        = require("assert");
 
 const port = process.env.PORT || 3000;
 
-require("dotenv").config();
+
  
 // const store = new MongoDBStore({
 //   uri: 'mongodb://localhost:27017/connect_mongodb_session_test',
