@@ -1,4 +1,29 @@
-<% include ../partials/_header %>
+<head>
+	<meta charset="UTF-8">
+    <title>DEPG-WDI Project 2</title>
+  <link href="https://fonts.googleapis.com/css?family=Limelight|Poiret+One" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+</head>
+<body>
+<header>
+  <nav class="navbar bg-dark navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand limelight-text" href="/" id="nav-text">Which?_Flix</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav poirot-text">
+      <a class="nav-item nav-link active" href="/landing">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="/movies">Movies</a>
+      <a class="nav-item nav-link" href="/users">Fellow Critics</a>
+      <a class="nav-item nav-link" href="/about">About Us</a>
+      <a class="nav-item nav-link" href="/users/<%=user.id%>">Your Profile</a>
+    </div>
+  </div>
+</nav>
+</header>	
 
 <div class="wrapper">
 
