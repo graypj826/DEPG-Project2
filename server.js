@@ -17,7 +17,7 @@ const assert        = require("assert");
 
 ////require database, .env and passport
 
-const port = process.env.PORT || 3000 || 7000;
+const port = process.env.PORT || 3000;
 
 require("dotenv").config();
  
@@ -36,7 +36,7 @@ store.on('error', function(error) {
   assert.ok(false);
 });
 
-require('./db/db.js'); 
+require('./db/db'); 
 
 ///////setup sessions
 app.use(require('express-session')({
