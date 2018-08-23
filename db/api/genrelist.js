@@ -9,11 +9,11 @@ var genreObj = JSON.parse(body);
 console.log(genreObj);
 
 for (let i=0; i<genreObj.genres.length; i++){
-	console.log(`Genre ID: ${genreObj.genres[i].id}		${genreObj.genres[i].name}`);
-}
+	console.log(`Genre ID: ${genreObj.genres[i].id}	${genreObj.genres[i].name}`);
 
-	res.render('movieSelector/home.ejs',
-		selectGenre:genreObj
-	)
-});
+	res.render('movieSelector/home.ejs', {
+		selectGenre: genreObj
+	})
+}
+})
 

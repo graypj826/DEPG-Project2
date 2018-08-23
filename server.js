@@ -17,7 +17,7 @@ const assert        = require("assert");
 
 ////require database, .env and passport
 
-const port = process.env.PORT || 7000;
+const port = process.env.PORT || 3000 || 7000;
 
 require("dotenv").config();
  
@@ -110,6 +110,7 @@ app.get('/landing', (req,res) => {
 
 ////set up launch///////////////////////////////////
 
-app.listen(port, () => {
-	console.log(`Server is listening on port: ${port}`);
-});
+app.listen(port);
+console.log('---------------------------------');
+console.log('Server running on port: ' + port);
+console.log('---------------------------------');
