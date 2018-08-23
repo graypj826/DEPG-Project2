@@ -10,9 +10,6 @@
     "type": "git",
     "url": "git+https://github.com/kaliforniaco/DEPG-Project2.git"
   },
-  "engines": {
-    "node": "^10.8.0"
-  },
   "keywords": [
     "netflix",
     "random",

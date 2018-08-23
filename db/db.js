@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 // create our db and connect
 //mongoose.connect('mongodb://localhost/project2');
-const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/project2';
+const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost/project2';
 
 mongoose.connect(mongoUri);
 
