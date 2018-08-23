@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/kaliforniaco/DEPG-Project2#readme",
   "dependencies": {
+    "babel-runtime": "^6.26.0",
     "bcrypt": "^3.0.0",
     "body-parser": "^1.18.3",
     "bootstrap": "^4.1.2",
