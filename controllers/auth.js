@@ -159,8 +159,7 @@ router.post("/register", (req, res) =>{
 			} else {
 				// req.session.username = createdUser.username;
 				// req.session.loggedIn = true;	
-				res.redirect("/landing")
-
+				res.send("success")
 			}
 		});	
 
