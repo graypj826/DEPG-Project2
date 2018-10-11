@@ -38,10 +38,10 @@ require('./db/db');
 ///////setup sessions
 app.use(require('express-session')({
   secret: 'This is a secret',
-  cookie: {
-    maxAge: 1000 * 60 * 60 * 24 * 7 // 1 week
-  },
-  store: store,
+  // cookie: {
+  //   maxAge: 1000 * 60 * 60 * 24 * 7 // 1 week
+  // },
+  // store: store,
   // // // Boilerplate options, see:
   // // // * https://www.npmjs.com/package/express-session#resave
   // // // * https://www.npmjs.com/package/express-session#saveuninitialized
@@ -96,7 +96,6 @@ app.get('/', (req,res) => {
 });
 
 app.get('/landing', (req,res) => {
-  console.log(req.user.id, "this is the req.user.id")
 	res.render('landingPage.ejs');
 });
 
