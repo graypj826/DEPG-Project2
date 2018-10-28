@@ -17,11 +17,10 @@
 		</div>
 	<form method="post" action="/movies" id="rand-movie-form">
 			<div class="poirot-white-text-rgba" id="hidden-rand-movie-form">
-				<input type="textarea" name="description" placeholder="<%=movieSelected.overview%>" readonly/>
-				<p name="title"> <%=movieSelected.title%><br>
-				
-				<img src="http://image.tmdb.org/t/p/w500///<%=movieSelected.poster_path%>" name="poster"/>
-				<%=movieSelected.tagline%>
+				<input type="text" name="description" placeholder="<%=movieSelected.overview%>" readonly/>
+				<input type="text" name="title" placeholder=
+				"<%=movieSelected.title%>"> 				
+				<input type="text" name="poster" placeholder="http://image.tmdb.org/t/p/w500///<%=movieSelected.poster_path%>">
 			</div>
 		<div class = "btn-group">
 			<p> Did you like this movie? <p>
