@@ -6,19 +6,23 @@
 			<h1>Here's What Yer Watchin'!</h1>
 		</div>
 	</div>
-
-
-	<form method="post" action="/movies">
 		<div id = "randmovie">
 			<div class="poirot-white-text-rgba">
-				<input type="text" name="description" placeholder="<%=movieSelected.overview%>" readonly/>
+				<%=movieSelected.overview%>" readonly/>
 				<p name="title"> <%=movieSelected.title%><br>
 				
 				<img src="http://image.tmdb.org/t/p/w500///<%=movieSelected.poster_path%>" name="poster"/>
 				<%=movieSelected.tagline%>
 			</div>
 		</div>
-
+	<form method="post" action="/movies" id="rand-movie-form">
+			<div class="poirot-white-text-rgba" id="hidden-rand-movie-form">
+				<input type="textarea" name="description" placeholder="<%=movieSelected.overview%>" readonly/>
+				<p name="title"> <%=movieSelected.title%><br>
+				
+				<img src="http://image.tmdb.org/t/p/w500///<%=movieSelected.poster_path%>" name="poster"/>
+				<%=movieSelected.tagline%>
+			</div>
 		<div class = "btn-group">
 			<p> Did you like this movie? <p>
 			<button type="submit">Add to Database</button>

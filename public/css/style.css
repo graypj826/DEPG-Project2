@@ -374,3 +374,6 @@ img{
 	background-color: rgba(228, 194, 21, 0.95);
 }
 
+#hidden-rand-movie-form{
+	display: none;
+}
