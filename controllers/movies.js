@@ -40,12 +40,7 @@ router.get("/", async (req, res) =>{
 
 router.get("/new", async (req, res) => {
 	try{
-
-		// const allUsers = await Users.find({});
 		res.render("movies/new.ejs"
-		// 	, {
-		// 	users : allUsers,
-		// }
 		);
 
 	} catch(err) {
@@ -57,21 +52,14 @@ router.get("/new", async (req, res) => {
 router.get("/:id/edit", (req, res) => {
 
 	Movies.findById(req.params.id, (err, foundMovie) => {
-		console.log(foundMovie)
 		if(err){
 			console.log(err)
 			res.send(err)
-
 		} else {
-
 			res.render("movies/edit.ejs", {
-
 				movie: foundMovie
-
 			})
-
 		}
-
 	})
 })
 
