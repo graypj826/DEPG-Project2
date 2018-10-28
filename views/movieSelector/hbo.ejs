@@ -11,8 +11,8 @@
 	<form method="post" action="/movies">
 		<div id = "randmovie">
 			<div class="poirot-white-text-rgba">
-				<p> <%=movieSelected.overview%><p>
-				<p name= <%=movieSelected.title%><br>
+				<p name="description"> <%=movieSelected.overview%><p>
+				<p name="title"> <%=movieSelected.title%><br>
 				
 				<img src="http://image.tmdb.org/t/p/w500///<%=movieSelected.poster_path%>" name="poster"/>
 				<%=movieSelected.tagline%>

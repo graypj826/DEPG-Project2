@@ -8,7 +8,8 @@ const moviesSchema = new mongoose.Schema({
 	stars : [],
 	director : [],
 	rating: Number,
-	year: Number
+	year: Number,
+	description: String
 
 
 });
