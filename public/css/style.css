@@ -357,6 +357,11 @@ img{
 }
 
 #show-movie-details{
+	background-color: rgba(19, 16, 0, 0.85);
+	color: gold
+}
+
+#show-movie-background{
 	background-color: rgba(228, 194, 21, 0.85);
 }
 
@@ -376,4 +381,12 @@ img{
 
 #hidden-rand-movie-form{
 	display: none;
+}
+
+#edit-button{
+	margin:0 auto;
+}
+
+#movie-title{
+	background-color: rgba(19, 16, 0, 0.85);
 }
